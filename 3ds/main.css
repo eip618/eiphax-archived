@@ -1,0 +1,247 @@
+body {
+  font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  color: #d2dcef;
+  line-height: 1.2;
+  width: 100%;
+  margin: auto;
+}
+html{
+ background: #2E3440 !important;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #434c5e;
+  color: #d2dcef;
+  text-align: right;
+  margin-right: 25%;
+}
+.freecontactform {
+width: 500px;
+font-family: arial;
+border: 1px solid #AAA;
+padding:10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+background: #2E3440;
+}
+
+freecontactform input{
+color: black !important;
+}
+.freecontactformheader {
+font-size:18px;
+font-weight:bold;
+padding-top:10px;
+padding-bottom:10px;
+text-align:center;
+}
+.freecontactformmessage {
+text-align:center;
+padding-bottom:10px;
+}
+.freecontactform td {
+padding:4px;
+font-size:12px;
+}
+.freecontactform p {
+padding:4px;
+}
+.freecontactform label {
+padding:4px;
+}
+.freecontactform label {
+padding-right: 10px;
+}
+.required {
+font-weight:bold;
+}
+.required_star {
+font-weight:bold;
+color:#F00;
+}
+.not-required {
+font-weight:normal
+}
+.antispammessage {
+padding:10px;
+border-top:1px solid #AAA;
+border-bottom:1px solid #AAA;
+font-weight:bold 
+}
+.antispamquestion {
+font-weight:normal;
+}
+.box {
+  padding: 10px;
+}
+
+.box2 {
+  padding-bottom: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-toggle-visibility {
+  font-size: 1.2em;
+  background-color: transparent;
+  color: #d2dcef !important;
+}
+.container{
+  width: 960px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.header {
+  background: #434c5e;
+  width: 100%;
+  top: 0;
+  position:fixed;
+}
+.logo {
+  float: left;
+}
+.content {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.content-index {
+	margin-top: 0px;
+}
+.nav a {
+  color: #d2dcef;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.nav li {
+  list-style: none;
+  float: left;
+  margin-left: 15px;
+  padding-top: 15px;
+}
+.nav {
+  float: right;
+}
+.nav2 a {
+  color: #d2dcef;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.nav2 li {
+  list-style: none;
+  float: left;
+  margin-left: 15px;
+}
+.nav2 {
+  float: right;
+}
+.little{
+    font-size: 10px;
+}
+ol {
+  margin: 0 0 1.5em;
+  padding: 0;
+  counter-reset: item;
+}
+
+ol > li {
+  padding: 0 0 0 2em;
+  text-indent: -2em;
+  list-style-type: none;
+  counter-increment: item;
+  font-size: 1em;
+  margin: 15px 0;
+}
+
+ol > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
+}
+a:hover{
+ color: #6495ED; 
+ text-decoration:none
+}
+
+a{
+ color:#7694b8; 
+ text-decoration:underline
+}
+.animated {
+    animation: fade 1.5s ease-in;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.warning {
+ margin: 2em 0;
+ padding: 1em;
+ font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+ background-color: #7b4848; 
+ font-size: 1em !important;
+ font-weight: bold;
+ text-indent: initial;
+ box-shadow: 0 2px 2px rgba(172, 94, 94, 0.25) !important;
+ color: #D8DEE9;
+ border-radius: 4px;
+}
+.info {
+ margin: 2em 0 ;
+ padding: 1em;
+ font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+ background-color: #80783d;
+ font-size: 1em !important;
+ font-weight: bold;
+ text-indent: initial;
+ box-shadow: 0 2px 2px rgba(166, 172, 94, 0.25) !important;
+ color: #D8DEE9; 
+ border-radius: 4px;
+}
+.blue{
+ margin: 2em 0;
+ padding: 1em;
+ font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+ background-color: #485e7b; 
+ font-size: 1em !important;
+ font-weight: bold;
+ text-indent: initial;
+ box-shadow: 0 2px 2px rgba(94,129,172,0.25) !important;
+ color: #D8DEE9; !important; 
+ border-radius: 4px;
+ }
+.banner {
+	width: 100%;
+	display: block;
+}
+.banner > .banner-image {
+	width: 100%;
+	display: block;
+	height: 300px;
+	object-fit: cover;
+}
+.code{
+  font-family: Monaco,Consolas,"Lucida Console",monospace !important;
+  display: inline;
+  border: .2px solid #f3f3f3;
+  border-radius: 4px;
+  padding: 0.15rem;
+  font-size: .9em;
+  background: #3c4454;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.125);
+    }
+}

@@ -1,0 +1,63 @@
+const ids = {
+  categories: ['steel', 'frog', 'fred', 'flip', 'ntr'],
+  steel: ['steel1', 'steel2', 'steel3', 'steel4', 'steel5', 'steel6', 'steel7', 'steel8', 'steel9', 'steel10'],
+  frog: {
+    main: ['update', 'frogtable'],
+    sub: ['frog1', 'frog2', 'frog3', 'frog4', 'frog5'],
+  },
+  fred: ['fred1', 'fred2', 'fred3', 'fred4', 'fred5', 'fred6'],
+  flip: ['flip1', 'flip2', 'flip3', 'flip4', 'flip5'],
+  ntr: [''], // added when needed
+};
+
+// Elements
+function toggleIssueDivs(idSelf = '') {
+  reset();
+  toggle(ids.categories, idSelf);
+}
+
+function singleIssueDivsSteel(idSelf = '') {
+  toggle(ids.steel, idSelf);
+}
+
+function singleIssueDivsFrog(idSelf = '') {
+  toggle(ids.frog.main, idSelf);
+}
+
+function singleIssueDivsFrogTable(idSelf = '') {
+  toggle(ids.frog.sub, idSelf);
+}
+
+function singleIssueDivsNtr(idSelf = '') {
+  toggle(ids.ntr, idSelf);
+}
+
+function singleIssueDivsFred(idSelf = '') {
+	toggle(ids.fred, idSelf);
+}
+
+function singleIssueDivsFlip(idSelf = '') {
+	toggle(ids.flip, idSelf);
+}
+
+// Util
+function toggle(ids, idSelf) {
+  show(idSelf);
+  ids.filter(id => id != idSelf).forEach(id => hide(id));
+}
+
+function reset() {
+  ids.steel.forEach(id => hide(id));
+  ids.frog.main.forEach(id => hide(id));
+  ids.frog.sub.forEach(id => hide(id));
+  ids.fred.forEach(id => hide(id));
+  ids.flip.forEach(id => hide(id));
+}
+
+function show(id) {
+  $(`#${id}`).removeClass('hidden');
+}
+
+function hide(id) {
+  $(`#${id}`).addClass('hidden');
+}

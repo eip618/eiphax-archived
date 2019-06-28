@@ -1,0 +1,35 @@
+Mar 18 22:16:39 eiphax1 sendmail[9249]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:17:39 eiphax1 sendmail[9249]: unable to qualify my own domain name (eiphax1) -- using short name
+Mar 18 22:17:39 eiphax1 sendmail[9249]: alias database /etc/mail/aliases rebuilt by fate
+Mar 18 22:17:39 eiphax1 sendmail[9249]: /etc/mail/aliases: 0 aliases, longest 0 bytes, 0 bytes total
+Mar 18 22:17:40 eiphax1 sm-mta[9355]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:17:42 eiphax1 sm-msp-queue[9362]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:18:40 eiphax1 sm-mta[9355]: unable to qualify my own domain name (eiphax1) -- using short name
+Mar 18 22:18:40 eiphax1 sm-mta[9365]: starting daemon (8.15.2): SMTP+queueing@00:10:00
+Mar 18 22:18:42 eiphax1 sm-msp-queue[9362]: unable to qualify my own domain name (eiphax1) -- using short name
+Mar 18 22:20:01 eiphax1 sm-msp-queue[9469]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:21:01 eiphax1 sm-msp-queue[9469]: unable to qualify my own domain name (eiphax1) -- using short name
+Mar 18 22:21:12 eiphax1 sendmail[10119]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:22:12 eiphax1 sendmail[10119]: unable to qualify my own domain name (eiphax1) -- using short name
+Mar 18 22:22:12 eiphax1 sendmail[10119]: alias database /etc/mail/aliases rebuilt by fate
+Mar 18 22:22:12 eiphax1 sendmail[10119]: /etc/mail/aliases: 0 aliases, longest 0 bytes, 0 bytes total
+Mar 18 22:22:17 eiphax1 sm-mta[9365]: restarting /usr/sbin/sendmail-mta due to signal
+Mar 18 22:22:17 eiphax1 sm-mta[9365]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:22:26 eiphax1 sendmail[10185]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:23:17 eiphax1 sm-mta[9365]: unable to qualify my own domain name (eiphax1) -- using short name
+Mar 18 22:23:17 eiphax1 sm-mta[10191]: starting daemon (8.15.2): SMTP+queueing@00:10:00
+Mar 18 22:24:23 eiphax1 sendmail[10206]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:25:23 eiphax1 sendmail[10206]: unable to qualify my own domain name (eiphax1) -- using short name
+Mar 18 22:25:23 eiphax1 sendmail[10206]: x2IMPNhI010206: from=www-data, size=189, class=0, nrcpts=1, msgid=<201903182225.x2IMPNhI010206@eiphax1>, relay=www-data@localhost
+Mar 18 22:25:23 eiphax1 sm-mta[10211]: x2IMPNJP010211: from=<www-data@eiphax1>, size=412, class=0, nrcpts=1, msgid=<201903182225.x2IMPNhI010206@eiphax1>, proto=ESMTP, daemon=MTA-v4, relay=localhost [127.0.0.1]
+Mar 18 22:25:23 eiphax1 sendmail[10206]: x2IMPNhI010206: to=eip@eiphax.tech, ctladdr=www-data (33/33), delay=00:00:00, xdelay=00:00:00, mailer=relay, pri=30189, relay=[127.0.0.1] [127.0.0.1], dsn=2.0.0, stat=Sent (x2IMPNJP010211 Message accepted for delivery)
+Mar 18 22:25:23 eiphax1 sm-mta[10213]: x2IMPNJP010211: to=<eip@eiphax.tech>, ctladdr=<www-data@eiphax1> (33/33), delay=00:00:00, xdelay=00:00:00, mailer=esmtp, pri=120412, relay=eiphax.tech. [157.230.80.146], dsn=4.0.0, stat=Deferred: Connection refused by eiphax.tech.
+Mar 18 22:31:43 eiphax1 sendmail[10231]: My unqualified host name (eiphax1) unknown; sleeping for retry
+Mar 18 22:32:43 eiphax1 sendmail[10231]: unable to qualify my own domain name (eiphax1) -- using short name
+Mar 18 22:32:43 eiphax1 sendmail[10231]: x2IMWhdO010231: from=www-data, size=189, class=0, nrcpts=1, msgid=<201903182232.x2IMWhdO010231@eiphax1>, relay=www-data@localhost
+Mar 18 22:32:43 eiphax1 sm-mta[10234]: x2IMWhII010234: from=<www-data@eiphax1>, size=412, class=0, nrcpts=1, msgid=<201903182232.x2IMWhdO010231@eiphax1>, proto=ESMTP, daemon=MTA-v4, relay=localhost [127.0.0.1]
+Mar 18 22:32:43 eiphax1 sendmail[10231]: x2IMWhdO010231: to=eip@eiphax.tech, ctladdr=www-data (33/33), delay=00:00:00, xdelay=00:00:00, mailer=relay, pri=30189, relay=[127.0.0.1] [127.0.0.1], dsn=2.0.0, stat=Sent (x2IMWhII010234 Message accepted for delivery)
+Mar 18 22:32:43 eiphax1 sm-mta[10236]: x2IMWhII010234: to=<eip@eiphax.tech>, ctladdr=<www-data@eiphax1> (33/33), delay=00:00:00, xdelay=00:00:00, mailer=esmtp, pri=120412, relay=eiphax.tech. [157.230.80.146], dsn=4.0.0, stat=Deferred: Connection refused by eiphax.tech.
+Mar 18 22:33:17 eiphax1 sm-mta[10237]: x2IMPNJP010211: to=<eip@eiphax.tech>, ctladdr=<www-data@eiphax1> (33/33), delay=00:07:54, xdelay=00:00:00, mailer=esmtp, pri=210412, relay=eiphax.tech. [157.230.80.146], dsn=4.0.0, stat=Deferred: Connection refused by eiphax.tech.
+Mar 18 22:33:17 eiphax1 sm-mta[10237]: x2IMWhII010234: to=<eip@eiphax.tech>, ctladdr=<www-data@eiphax1> (33/33), delay=00:00:34, xdelay=00:00:00, mailer=esmtp, pri=210412, relay=eiphax.tech., dsn=4.0.0, stat=Deferred: Connection refused by eiphax.tech.
+Mar 18 22:40:01 eiphax1 sm-msp-queue[10345]: My unqualified host name (eiphax1) unknown; sleeping for retry
