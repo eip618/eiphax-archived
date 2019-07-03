@@ -1,4 +1,7 @@
-<?php require('header.php') ?>
+<?php 
+$title="What?";
+require('header.php') 
+?>
 <div class="container">
     <div class="content">
         <center><h1>what?</h1></center>

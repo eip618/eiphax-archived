@@ -1,40 +1,11 @@
-<!DOCTYPE html>
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-136684222-1');
-</script>
-    <title>Fredminer</title>
-    <link rel="stylesheet" href="main.css" type="text/css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body class="animated">
-        <div class="header">
-    <div class="container">
-    <div class="logo">
-        <h1>eipHax</h1>    
-    </div>
-    <div class="nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sderrors.html">SD Error Guide</a></li>
-            <li><a href="nsui.html">NSUI Guide</a></li>
-			<li><a href="piracy.html">Piracy CliffNotes</a></li>
-			<li><a href="https://tinydb.eiphax.tech/">TinyDB</a></li>
-			<li><a href="issues.html">Troubleshooting</a></li>
-        </ul>
-    </div>
-</div>
-</div>
-        <div class="container">
-        <div class="content">
-            <center><h1>Fredminer</h1></center>
-            <hr>
+<?php
+$title="Fredminer";
+require('header.php');
+?>
+<div class="container">
+    <div class="content">
+        <center><h1>Fredminer</h1></center>
+        <hr>
         <p>Welcome to Fredminer. This is a method of free CFW for US and JP systems, and cheap CFW for EU systems.
 		<br>Fredminer requires any DSiWare game. US and JP both have free DSiWare on the eShop. EU does not.
 		<br>This means that you must either already have a DSiWare game, or have access to the eShop to be able to download one.
@@ -63,15 +34,15 @@
 		<p>
 		<button class="btn-toggle-visibility" data-target="#jp">JP</button>
         <div class="box hidden" id="jp">Try this QR code in the eShop QR scanner.
-        <br><img src="pic/qr-jp.png">
+            <br><img src="pic/qr-jp.png">
         </div><p>
         <button class="btn-toggle-visibility" data-target="#us">US</button>
         <div class="box hidden" id="us">Try this QR code in the eShop QR scanner.
-        <br><img src="pic/qr-us.png">
+            <br><img src="pic/qr-us.png">
         </div><p>
         <button class="btn-toggle-visibility" data-target="#eu">EU</button>
         <div class="box hidden" id="eu">EU region consoles have no free DSiWare. Sorry! Usually, the cheapest one is around 2 dollars/pounds/euro/etc. Find one and buy it!
-		<br>Alternatively, you can <a href="./frogminer.html">try Frogminer</a>. It works differently than Fredminer, and will be free for EU.
+	    	<br>Alternatively, you can <a href="./frogminer.html">try Frogminer</a>. It works differently than Fredminer, and will be free for EU.
         </div><p>
 			
 		<h2>Preparation: Seedminer</h2>
@@ -121,48 +92,26 @@
 		</ol>
 		
 		<h2>Fredminer: Fredmining</h2>
-			<ol>
-				<li>Extract the Frogminer_save, fredtool_output, Luma3ds and b9stool archives to a folder of your choice.</li>
-				<li>Copy "boot.nds" from the b9stool folder onto your SD card root. <i>NB: Your root is the SD card's main window, not inside any folders. You may see such folders as Nintendo 3DS and DCIM. This means you are in the root.</i></li>
-				<li>Copy "boot.firm" from the Luma3ds folder onto your SD card root.</li>
-				<li>Copy "boot.3dsx" onto your SD card root.</li>
-				<li>Copy the "private" folder from the Frogminer_save folder onto your SD card root. <i>This means the whole "private" folder, not just its contents.</i></li>
-				<li>From the fredtool folder, open output > hax. Copy the file inside this folder onto your SD card: SD > Nintendo 3DS > [id0] > [id1] > Nintendo DSiWare. You will have two DSiWare files inside this folder.</li>
-				<li>Put your SD card back into your console and power it on.</li>
-				<li>On your console, go to System Settings > Data Management > DSiWare.</li>
-				<li>Tap SD card, tap the Haxxxxxxxxx! entry, then tap Copy.</li>
-				<li>Go back to System Settings > Internet Settings > DS Connection Settings.</li>
-				<li>If all was successful, you should have booted to JPN Flipnote. Follow <a href="https://zoogie.github.io/web/flipnote_directions/" target="_blank">these slides</a> in order to boot into b9stool. <i>Here's a <a href="https://streamable.com/ti9jk" target="_blank">video</a> if you prefer that.</i></li>
-				<li>Once you have booted b9stool, select "install boot9strap" and follow the on screen prompts.</li>
-				<li>Once boot9strap is successfully installed, power off your device. <i>If the Luma Configuration menu appears, skip to step 15.</i></li>
-				<li>Power on your device. You should boot into the Luma Configuration menu.</li>
-				<li>In this menu, put an X in the "Show NAND or user string" box. Press Start to continue.</li>
-				<li>You should now be at the 3DS home menu. From here, follow <a href="https://3ds.hacks.guide/finalizing-setup">this page.</a></li>
-            </ol>
-            Once you have finished Finalizing Setup, you have fully functioning custom firmware. Congrats!
-            <div class="info">Once you have finished the process, you should restore your DS Internet Settings by copying the DSiWare .bin file from the "clean" folder in the fredtool_output folder from earlier to SD > Nintendo 3DS > [id0] > [id1] > DSiWare, then restoring it in System Settings > Data Management > DSiWare > SD card > tap the game > Copy</div>
-			<div class="footer">
-	<div class="container">
-	<div class="nav2">
-	<ul>
-		<li><a href="./privacy.html">Privacy</a>
-		<li><a href="./signpost.html">Signpost</a></li>
-		<li><a href="./issues.html">Troubleshooting</a></li>
-		<li><a href="./donate.html">Donations</a></li>
-		<li><a href="./contact.htm">Contact</a></li>
-		<li><a href="https://nx.eiphax.tech">Switch</a></li>
-	</ul>
-	</div>
-	</div>
-	</div>
-		</div>
-		</div>
-		<script>
-    document.querySelectorAll('.btn-toggle-visibility').forEach(function(currentToggleVisibilityButton) {
-  currentToggleVisibilityButton.addEventListener('click', function () {
-    document.querySelector(currentToggleVisibilityButton.getAttribute('data-target')).classList.toggle('hidden');
-  });
- });
-</script>
-		</body>
-</html>
+        <ol>
+            <li>Extract the Frogminer_save, fredtool_output, Luma3ds and b9stool archives to a folder of your choice.</li>
+            <li>Copy "boot.nds" from the b9stool folder onto your SD card root. <i>NB: Your root is the SD card's main window, not inside any folders. You may see such folders as Nintendo 3DS and DCIM. This means you are in the root.</i></li>
+            <li>Copy "boot.firm" from the Luma3ds folder onto your SD card root.</li>
+            <li>Copy "boot.3dsx" onto your SD card root.</li>
+            <li>Copy the "private" folder from the Frogminer_save folder onto your SD card root. <i>This means the whole "private" folder, not just its contents.</i></li>
+            <li>From the fredtool folder, open output > hax. Copy the file inside this folder onto your SD card: SD > Nintendo 3DS > [id0] > [id1] > Nintendo DSiWare. You will have two DSiWare files inside this folder.</li>
+            <li>Put your SD card back into your console and power it on.</li>
+            <li>On your console, go to System Settings > Data Management > DSiWare.</li>
+            <li>Tap SD card, tap the Haxxxxxxxxx! entry, then tap Copy.</li>
+            <li>Go back to System Settings > Internet Settings > DS Connection Settings.</li>
+            <li>If all was successful, you should have booted to JPN Flipnote. Follow <a href="https://zoogie.github.io/web/flipnote_directions/" target="_blank">these slides</a> in order to boot into b9stool. <i>Here's a <a href="https://streamable.com/ti9jk" target="_blank">video</a> if you prefer that.</i></li>
+            <li>Once you have booted b9stool, select "install boot9strap" and follow the on screen prompts.</li>
+            <li>Once boot9strap is successfully installed, power off your device. <i>If the Luma Configuration menu appears, skip to step 15.</i></li>
+            <li>Power on your device. You should boot into the Luma Configuration menu.</li>
+            <li>In this menu, put an X in the "Show NAND or user string" box. Press Start to continue.</li>
+            <li>You should now be at the 3DS home menu. From here, follow <a href="https://3ds.hacks.guide/finalizing-setup">this page.</a></li>
+        </ol>
+        Once you have finished Finalizing Setup, you have fully functioning custom firmware. Congrats!
+        <div class="info">Once you have finished the process, you should restore your DS Internet Settings by copying the DSiWare .bin file from the "clean" folder in the fredtool_output folder from earlier to SD > Nintendo 3DS > [id0] > [id1] > DSiWare, then restoring it in System Settings > Data Management > DSiWare > SD card > tap the game > Copy</div>
+    </div>
+</div>
+<? require('footer.php'); ?>

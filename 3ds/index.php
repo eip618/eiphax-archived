@@ -1,51 +1,13 @@
-<html>
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<?php
+$title="The Homebrew Index"
+require('header.php');
+?>
 
-  gtag('config', 'UA-136684222-1');
-</script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
-	<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-136684222-1');
-	</script>
-    <title>The Homebrew Index</title>
-    <link rel="stylesheet" href="main.css" type="text/css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body class="animated">
-        <div class="header">
-    <div class="container">
-    <div class="logo">
-        <h1>eipHax</h1>    
-    </div>
-    <div class="nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sderrors.html">SD Error Guide</a></li>
-            <li><a href="nsui.html">NSUI Guide</a></li>
-		    <li><a href="piracy.html">Piracy CliffNotes</a></li>
-		    <li><a href="https://tinydb.eiphax.tech/">TinyDB</a></li>
-		    <li><a href="issues.html">Troubleshooting</a></li>
-        </ul>
-    </div>
-    </div>
-</div>
-</div>
-        <div class="container">
-        <div class="content">
-            <center><h1>eip's homebrew index: we /linux/ now son</h1>
-            <div class="little">typed with no capitals because that means i'm cool</div></center>
-            <hr>
+<div class="container">
+    <div class="content">
+        <center><h1>eip's homebrew index: we /linux/ now son</h1>
+        <div class="little">typed with no capitals because that means i'm cool</div></center>
+        <hr>
         <p>
         Hello and welcome to Eip's Homebrew Index.
         <br>
@@ -65,22 +27,7 @@
         <p>I also have a page on <a href="./piracy.html">piracy</a> as it relates to the 3DS and the Nintendo Homebrew server, a brief guide for the <a href=".\nsui.html">New Super Ultimate Injector</a>, a <a href="./seedfaq.html">FAQ</a> for Seedminer and a page on how to <a href="./sderrors.html">comprehensively check your SD card for errors</a>, which I would probably recommend doing before you start with any of these processes but that's just, like, my opinion, man. I also offer a <a href="./solution.html">guaranteed solution</a> to any problems you may be having, a page full of <a href="./what.html" target="_blank">explanations</a> and some <a href="./catalyst.html" target="_blank">starter kits</a> for hacking your console. Now with added <a href="issues.html">troubleshooting.</a>
         <br>This entire website should be considered a permanent WIP, but LOOK MA I HAVE CSS NOW.
 		<marquee>props to crc gang (also props to deprecated html elements that shouldn't work any more but do :lenny:)</marquee>
-    <p><div class="blue"><a href="contact.htm">Contact me</a> if you have problems, suggestions or other feedback.</div>
-	<div class="footer">
-	<div class="container">
-	<div class="nav2">
-	<ul>
-		<li><a href="./privacy.html">Privacy</a>
-		<li><a href="./signpost.html">Signpost</a></li>
-		<li><a href="./issues.html">Troubleshooting</a></li>
-		<li><a href="./donate.html">Donations</a></li>
-		<li><a href="./contact.htm">Contact</a></li>
-		<li><a href="https://nx.eiphax.tech">Switch</a></li>
-	</ul>
-	</div>
-	</div>
-	</div>
+        <p><div class="blue"><a href="contact.htm">Contact me</a> if you have problems, suggestions or other feedback.</div>
     </div>
-    </div>
-    </body>
-</html>
+</div>
+<?php require('footer.php'); ?>

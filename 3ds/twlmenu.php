@@ -1,40 +1,11 @@
-<html>
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-136684222-1');
-</script>
-    <title>TWiLightMenu++</title>
-    <link rel="stylesheet" href="main.css" type="text/css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body class="animated">
-        <div class="header">
-    <div class="container">
-    <div class="logo">
-        <h1>eipHax</h1>    
-    </div>
-    <div class="nav">
-		<ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sderrors.html">SD Error Guide</a></li>
-            <li><a href="nsui.html">NSUI Guide</a></li>
-			<li><a href="piracy.html">Piracy CliffNotes</a></li>
-			<li><a href="https://tinydb.eiphax.tech/">TinyDB</a></li>
-			<li><a href="issues.html">Troubleshooting</a></li>
-        </ul>
-    </div>
-</div>
-</div>
-        <div class="container">
-        <div class="content">
-            <center><h1>TWiLightMenu++: the NDS loader</h1></center>
-            <hr>
+<?php 
+$title="TWiLightMenu++";
+require('header.php')
+?>
+<div class="container">
+	<div class="content">
+		<center><h1>TWiLightMenu++: the NDS loader</h1></center>
+		<hr>
         <p>This is a short guide on how to install TWiLightMenu++, the latest and greatest nds-bootstrap frontend. All glory to RocketRobz.
 		<br>This tutorial assumes you have CFW, and do not have a flashcart. If you do have a flashcart, see the FAQ thread at the bottom of this page.
 		<br>There are three methods. If the Easier Method does not work, try the Easy Method. If the Easy Method does not work, try the Manual Method.
@@ -42,11 +13,11 @@
 		<p>
 		<button class="btn-toggle-visibility" data-target="#easier">Easier Way</button>
 		<div class="box hidden" id="easier">
-		<h3>Things You Need</h3>
+			<h3>Things You Need</h3>
 			<ol>
 				<li>The latest release of FBI (version 2.6.0 at time of writing).</li>
 			</ol>
-		<h3>Getting It Done</h3>
+			<h3>Getting It Done</h3>
 			<ol>
 				<li>Open FBI and select Remote Install > Scan QR Code.</li>
 				<li>Scan this QR code:<br>
@@ -63,11 +34,11 @@
 		</div>
 		<button class="btn-toggle-visibility" data-target="#easy">Easy Way</button>
 		<div class="box hidden" id="easy">
-		<h3>Things You Need</h3>
+			<h3>Things You Need</h3>
 			<ol>
 				<li>The latest release of TWiLightMenu++ Updater .cia from <a href="https://github.com/RocketRobz/TWiLightMenu-Updater/releases" target="_blank">here.</a></li>
 			</ol>
-		<h3>Getting It Done</h3>
+			<h3>Getting It Done</h3>
 			<ol>
 				<li>Turn your console off, take out your SD card and access it via your computer.</li>
 				<li>In your SD card root directory, make a folder called "cias" if one does not already exist.</li>
@@ -86,17 +57,17 @@
 				<li>Exit the updater.</li>
 				<li>TWiLightMenu++ should be on your home screen. If it is not, reboot the console.</li>
 			</ol>
-		<p>Got problems? Something didn't work? Try the Manual Way below.
+			<p>Got problems? Something didn't work? Try the Manual Way below.
 		</div>
 		<p>
 		<button class="btn-toggle-visibility" data-target="#manual">Manual Way</button>
 		<div class="box hidden" id="manual">
-		<h3>Things You Need</h3>
+			<h3>Things You Need</h3>
 			<ol>
 				<li>The latest release of TWiLightMenu++ from <a href="https://github.com/RocketRobz/TWiLightMenu/releases" target="_blank">here.</a>
 				<li>Install 7-Zip, the suggested archival management tool from <a href="http://www.7zip.org/download.html" target="_blank">here.</a>
 			</ol>
-		<h3>Getting It Done</h3>
+			<h3>Getting It Done</h3>
 			<ol>
 				<li>Turn your console off, take out your SD card and access it via your computer.</li>
 				<li>In your SD card root directory, make a folder called "cias" if one does not already exist.</li>
@@ -117,31 +88,9 @@
 				<li>TWiLightMenu++ should now appear on your home screen. You can add more roms to the rom folder whenever you wish.</li>
 			</ol>
 		</div>
-			<p>
-			<div class="info">See <a href="https://gbatemp.net/threads/ds-i-3ds-twilight-menu-gui-for-ds-i-games-and-ds-i-menu-replacement.472200/" target="_blank">here</a> for FAQ and further instruction.</div>
-			<div class="info">See <a href="https://docs.google.com/spreadsheets/d/1LRTkXOUXraTMjg1eedz_f7b5jiuyMv2x6e_jY_nyHSc/edit?usp=sharing" target="_blank">here</a> for game compatibility information.</div>
-			<div class="footer">
-	<div class="container">
-	<div class="nav2">
-	<ul>
-		<li><a href="./privacy.html">Privacy</a>
-		<li><a href="./signpost.html">Signpost</a></li>
-		<li><a href="./issues.html">Troubleshooting</a></li>
-		<li><a href="./donate.html">Donations</a></li>
-		<li><a href="./contact.htm">Contact</a></li>
-		<li><a href="https://nx.eiphax.tech">Switch</a></li>
-	</ul>
+		<p>
+		<div class="info">See <a href="https://gbatemp.net/threads/ds-i-3ds-twilight-menu-gui-for-ds-i-games-and-ds-i-menu-replacement.472200/" target="_blank">here</a> for FAQ and further instruction.</div>
+		<div class="info">See <a href="https://docs.google.com/spreadsheets/d/1LRTkXOUXraTMjg1eedz_f7b5jiuyMv2x6e_jY_nyHSc/edit?usp=sharing" target="_blank">here</a> for game compatibility information.</div>
 	</div>
-	</div>
-	</div>
-		</div>
-		</div>
-		<script>
-    document.querySelectorAll('.btn-toggle-visibility').forEach(function(currentToggleVisibilityButton) {
-  currentToggleVisibilityButton.addEventListener('click', function () {
-    document.querySelector(currentToggleVisibilityButton.getAttribute('data-target')).classList.toggle('hidden');
-  });
- });
-</script>
-		</body>
-</html>
+</div>
+<?php require('footer.php') ?>
