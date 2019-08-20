@@ -1,6 +1,8 @@
 const ids = {
-  categories: ['steel', 'frog', 'fred', 'flip', 'ntr'],
+  categories: ['steel', 'pic', 'frog', 'fred', 'flip', 'ntr'],
   steel: ['steel1', 'steel2', 'steel3', 'steel4', 'steel5', 'steel6', 'steel7', 'steel8', 'steel9', 'steel10'],
+  pic: ['pic1', 'pic2', 'pic3', 'pic4'],
+  bannerbomb: ['bb1', 'bb2', 'bb3', 'bb4'],
   frog: {
     main: ['update', 'frogtable'],
     sub: ['frog1', 'frog2', 'frog3', 'frog4', 'frog5'],
@@ -18,6 +20,14 @@ function toggleIssueDivs(idSelf = '') {
 
 function singleIssueDivsSteel(idSelf = '') {
   toggle(ids.steel, idSelf);
+}
+
+function singleIssueDivsPic(idSelf = '') {
+  toggle(ids.pic, idSelf);
+}
+
+function singleIssueDivsBannerbomb(idSelf = '') {
+  toggle(ids.bannerbomb, idSelf);
 }
 
 function singleIssueDivsFrog(idSelf = '') {
@@ -48,6 +58,8 @@ function toggle(ids, idSelf) {
 
 function reset() {
   ids.steel.forEach(id => hide(id));
+  ids.pic.forEach(id => hide(id));
+  ids.bannerbomb.forEach(id => hide(id));
   ids.frog.main.forEach(id => hide(id));
   ids.frog.sub.forEach(id => hide(id));
   ids.fred.forEach(id => hide(id));

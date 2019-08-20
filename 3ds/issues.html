@@ -71,6 +71,10 @@ th, td {
 					<th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('flip')">Flipnote</button></th>
                     <!-- <th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('ntr')">NTRboot</button></th> NTRBOOT BUTTON COMMENTED OUT -->
                 </tr>
+				<tr>
+                    <th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('pic')">Pichaxx</button></th>
+                    <th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('bannerbomb')">BannerBomb3</button></th>
+				</tr>
             </table>
 			</center>
             <p>Clicking a solution or tool will overwrite the previous one with the one most recently clicked.
@@ -327,6 +331,7 @@ th, td {
 		<p><img src="pic/priv2.png"> <i>This is NOT correct.</i>
 		<p><img src="pic/priv3.png"> <i>This is NOT correct.</i>
 		<p>These are examples only. There are many ways to screw this up. The first image is the only correct folder and file path. Make sure yours matches it.
+		<br><a href="https://github.com/zoogie/Frogminer/releases/tag/1.0">Here's where you can get the .ppm file.</a>
 	</div>
 	<div class="box2 hidden" id="flip2">
 		<br><h3>Frozen!</h3>There's a pretty good chance you've accidentally drawn on the notes before merging the two glitched notes together.
@@ -356,12 +361,81 @@ th, td {
 		<p>Once you have put the .ppm file in the right place, you can try launching the Flipnote exploit again.
 	</div>
 	
+		<!-- PIC LEADING DIV -->
+	<div class="box hidden" id="pic"><center>
+	    <table>
+	        <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsPic('pic1')"><a href="#pic1">Yellow screen</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsPic('pic2')"><a href="#pic2">Red screen</a></button></td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsPic('pic3')"><a href="#pic3">Game launches normally</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsPic('pic4')"><a href="#pic4">Game crashes</a></button></td>
+	        </tr>
+		</table>
+		</center>
+		</div>
+		<!-- PIC ISSUE DIVS -->
+	<div class="box hidden" id="pic1">
+	<h3>Crash</h3>
+	<br>A simple crash. Close out to the home menu and try again. If you get more than 10 of these in a row, replace your otherapp and sav file.
+		</div>
+	<div class="box hidden" id="pic2">
+	<h3>Missing boot.3dsx</h3>
+	<br>You're missing boot.3dsx (the Homebrew launcher) from the root of your SD card, or you have misplaced it somewhere other than the root. Put boot.3dsx on the SD root.
+		</div>
+	<div class="box hidden" id="pic3">
+	<h3>Normal launch</h3>
+	<br>You either misplaced the sav file, or it's not correct. Try generating it again using your movable from Seedminer, and then put it on your SD card in Nintendo 3DS > ID0 > ID1 > title > 00040000 > 0017c100 > data
+		</div>
+	<div class="box hidden" id="pic4">
+	<h3>Crash</h3>
+	<br>Your otherapp or sav file is incorrect, misplaced or misnamed. The otherapp.bin goes on the root of the SD card and should be named "otherapp.bin". Make sure you got the otherapp for your correct version and region.
+	<br>The sav file from the Pichaxx injector goes on the SD card in Nintendo 3DS > ID0 > ID1 > title > 00040000 > 0017c100 > data
+		</div>
+		<!-- BB3 LEADING DIV -->
+	<div class="box hidden" id="bannerbomb"><center>
+	    <table>
+	        <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsBannerbomb('bb1')"><a href="#bb1">App doesn't crash</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsBannerbomb('bb2')"><a href="#bb2">App crashes, but not magenta</a></button></td>
+	        </tr>
+	        <!-- <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsBannerbomb('bb3')"><a href="#bb3">Game launches normally</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsBannerbomb('bb4')"><a href="#bb4">Game crashes</a></button></td>
+	        </tr> -->
+		</table>
+		</center>
+		</div>
+		<!-- bb3 ISSUE DIVS -->
+	<div class="box hidden" id="bb1">
+	<h3>No crash</h3>
+	<br>Usually, this error is caused by the exploit DSiWare (F00D43D5.bin) being misplaced.
+	<p><img src="pic/bb1.png">
+	<p>This is an example of an <b>incorrect</b> placement. In this example, the 30ff... folder, outlined in blue, is the ID0. The c7aa... folder, outlined in red, is the ID1. The Nintendo DSiWare folder must be INSIDE the ID1.
+	<p><img src="pic/bb2.png">
+	<p>This is another example of <b>incorrect</b> placement. Here, the exploit DSiWare (F00D43D5.bin) exists, but is not placed in the DSiWare folder.
+	<p><img src="pic/bb3.png">
+	<p>This example is <b>correct</b> placement. The exploit DSiWare exists, is in the right folder, and the folder is inside the ID0 and ID1.
+		</div>
+	<div class="box hidden" id="bb2">
+	<h3>General crash</h3>
+	<br>Usually, this is caused by trying to use the exploit DSiWare (F00D43D5.bin) with Fredtool. You have to use the exploit DSiWare to get a proper DSiWare dump, and the dump you get from that process is the dump you use with Fredtool.
+	<br>Have another read of the <a href="./bb3.html">BannerBomb3</a> guide and do the process properly.
+		</div>
+	<!-- <div class="box hidden" id="bb3">
+		</div>
+	<div class="box hidden" id="bb4">
+		</div> -->
 		<!-- NTRBOOT LEADING DIV -->
 	<div class="box hidden" id="ntr">
         <p><center>You got me! There's nothing here yet.</center>
         
         <!-- NTRBOOT END DIV -->
 	</div>
+	<br>
+	<br>
+	<br>
 	<div class="footer">
 	<div class="container">
 	<div class="nav2">
