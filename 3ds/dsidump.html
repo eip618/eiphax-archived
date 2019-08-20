@@ -18,7 +18,7 @@
 
   gtag('config', 'UA-136684222-1');
 	</script>
-    <title>Frogminer</title>
+    <title>DSiWare Dumper</title>
     <link rel="stylesheet" href="main.css" type="text/css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </head>
@@ -42,11 +42,15 @@
 </div>
         <div class="container">
         <div class="content">
-            <center><h1>frogminer: legacy method</h1></center>
+            <center><h1>Pichaxx + DSiWare Dumper</h1></center>
             <hr>
-        <p>At the moment, we don't recommend Frogminer, as we have better and more efficient methods. If you can, go back to the <a href="./seedminer.html">Seedminer directory</a> and pick a different method.
-		<br>If, for some reason, you need to use Frogminer, here's some instructions.
-		<br>Frogminer requires access to the Homebrew Menu. If you don't already have access, I'll suggest Pichaxx. If you do already have it, you can skip the Pichaxx section.
+        <p>You can use the DSiWare Dumper to generate a DSiWare file for you to use with <a href="./fredminer.html">Fredminer</a>.
+		<br>Don't have Homebrew access? Pichaxx is a free Homebrew method. There are instructions here.
+		<h3>Before You Start</h3>
+			<ol>
+				<li>First step: test. On your console, navigate to System Settings > Internet Settings > DS Connection Settings.</li>
+				<li>If this causes the old DS menu to appear, you can proceed. If it crashes, or hangs on a black screen, go <a href="./twlfix.html">TWLfix</a> and come back.</li>
+			</ol>
 		<p><button class="btn-toggle-visibility" data-target="#pichaxx">Pichaxx</button>
         <div class="box hidden" id="pichaxx">
         <h2>What You Need</h2>
@@ -106,51 +110,23 @@
         <li>Create a folder in your root called "3ds".</li>
         <li>Put your SD card back in your console and start the game.</li>
         </ol>
-        You should now have booted into the Homebrew Menu. It will say "no applications found". This is normal. If you do see the Homebrew Menu, click the "I already have a homebrew entry point" button and follow that to get to CFW!
-        <h2>Troubleshooting</h2>
-        <h3><a href="issues.html">Here!</a></h3>
-            
-        </div>
-        <button class="btn-toggle-visibility" data-target="#frog">I already have a homebrew entry point</button>
-        <div class="box hidden" id="frog">
-        <h2>What You Need</h2>
-        <div class="info">In all cases, where offered the option, download the <b>latest release, and NOT the source code version.</b></div>
-        <ol>
-            <li>Frogtool.3dsx, available in the zip file from <a href="https://github.com/zoogie/Frogtool/releases/latest" target="_blank">here</a>.</li>
-            <li>frogcert.bin, available <a href="magnet:?xt=urn:btih:D12278EA50BB3574F1FBD327F3D0E2292C70941F&dn=frogcert.bin&tr=udp%3a%2f%2fbigfoot1942.sektori.org%3a6969%2fannounce&tr=https%3a%2f%2ftracker.fastdownload.xyz%3a443%2fannounce&tr=https%3a%2f%2fopentracker.xyz%3a443%2fannounce&tr=http%3a%2f%2fopen.trackerlist.xyz%3a80%2fannounce&tr=udp%3a%2f%2ftracker.tiny-vps.com%3a6969%2fannounce&tr=http%3a%2f%2ft.nyaatracker.com%3a80%2fannounce&tr=udp%3a%2f%2fopen.demonii.si%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.port443.xyz%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.vanitycore.co%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.torrent.eu.org%3a451%2fannounce&tr=udp%3a%2f%2fretracker.lanta-net.ru%3a2710%2fannounce&tr=udp%3a%2f%2fthetracker.org%3a80%2fannounce&tr=http%3a%2f%2ftorrent.nwps.ws%3a80%2fannounce&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.iamhansen.xyz%3a2000%2fannounce&tr=udp%3a%2f%2fbt.xxx-tracker.com%3a2710%2fannounce&tr=http%3a%2f%2f0d.kebhana.mx%3a443%2fannounce&tr=udp%3a%2f%2fexodus.desync.com%3a6969%2fannounce&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2ftracker4.itzmx.com%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.justseed.it%3a1337%2fannounce&tr=http%3a%2f%2ftherightsize.net%3a1337%2fannounce&tr=udp%3a%2f%2fretracker.hotplug.ru%3a2710%2fannounce&tr=udp%3a%2f%2ftracker.internetwarriors.net%3a1337%2fannounce&tr=udp%3a%2f%2f9.rarbg.com%3a2800%2fannounce&tr=https%3a%2f%2f2.track.ga%3a443%2fannounce
-" target=”_blank”>here</a>. <b><u>THIS IS A TORRENT. You will need a torrent client to access this link. <a href="https://www.qbittorrent.org/download.php" target="_blank">qbittorrent</a> is recommended.</u></b></li>
-            <li>the b9stool archive from <a href="https://github.com/zoogie/b9sTool/releases/latest" target=”_blank”>this link</a>.</li>
-            <li>The latest Luma release from <a href="https://github.com/AuroraWright/Luma3DS/releases" target=”_blank”>here</a>.</li>
-            <li>Access to the Homebrew Launcher. If you do not already have access, scroll back up and click "I do not have a homebrew entry point", and do that tutorial. <b><u>KEEP YOUR movable.sed, YOU WILL NEED IT FOR THIS PROCESS.</u></b></li>
-            <li>Your [ movable.sed ]. If you do not have this file from the above tutorial, open the "I do not have a homebrew entry point" section above and follow the "Finding your id0" and "Finding your movable.sed" sections, then come back here.</li>
-            <li>Your console updated to 11.10. To do this, go to System Settings, then Other Settings, then find System Update. <i>If this breaks your existing homebrew access, go click "I do not have a homebrew entry point" above and do that tutorial.</i></li>
-        </ol>
-            
-        <h2>How To Frii CFW</h2>
-        <ol>
-            <li>Extract the Frogtool, Luma3ds and b9stool archives to a folder of your choice.</li>
-            <li>Copy "boot.nds" from the b9stool folder onto your SD card root. <i>NB: Your root is the SD card's main window, not inside any folders. You may see such folders as Nintendo 3DS and DCIM. This means you are in the root.</i></li>
-            <li>Copy "boot.firm" from the Luma3ds folder onto your SD card root.</li>
-            <li>Copy "frogcert.bin" onto your SD card root.</li>
-            <li>Copy "movable.sed" to the SD card root.</li>
-            <li>Copy "Frogtool.3dsx" to inside the 3ds folder on your SD card. Make one if it does not exist. <i>NB: This means "3ds", <b>NOT</b> "Nintendo 3DS"</i></li>
-            <li>Put your SD in your console and power on.</li>
-            <li>Launch Steel Diver, which should launch the Homebrew Menu.</li>
-            <li>Launch Frogtool 2.2 from the list of applications.</li>
-            <li>Select INJECT patched DS Download Play, and press A.</li>
-            <li>Once this operation has finished, read the top screen. All operations should finish in OK, GOOD or DONE. If any finish in NOT OK, MISSING, CORRUPTED or FAIL, try injecting again or ask for help on the Discord server linked at the top of this page.</li>
-            <li>If all operations succeed, select BOOT patched DS Download Play and press A.</li>
-            <li>Wait a minute or two. Eventually, this should boot straight into Japanese Flipnote. Follow <a href="https://zoogie.github.io/web/flipnote_directions/" target="_blank">these slides</a> in order to boot into b9stool. <i>Here's a <a href="https://streamable.com/ti9jk" target="_blank">video</a> if you prefer that.</i></li>
-            <li>Once you have booted b9stool, select "install boot9strap" and follow the on screen prompts.</li>
-            <li>Once boot9strap is successfully installed, power off your device. <i>If the Luma Configuration menu appears, skip to step 16.</i></li>
-            <li>Power on your device. You should boot into the Luma Configuration menu.</li>
-            <li>In this menu, put an X in the "Show NAND or user string" box. Press Start to continue.</li>
-            <li>You should now be at the 3DS home menu. From here, follow <a href="https://3ds.hacks.guide/finalizing-setup">this page.</a></li>
-            </ol>
-            Once you have finished Finalizing Setup, you have fully functioning custom firmware. Congrats!
-            <h2>Troubleshooting</h2>
-            <h3><a href="issues.html">Here!</a></h3>
-            </div>
+		<br>You might see a message saying there are no applications. This is normal, and you can proceed to the DSiWare Dumper.
+		<p>
+		<button class="btn-toggle-visibility" data-target="#dsidump">DSiWare Dumper</button>
+		<div class="box hidden" id="dsidump">
+		<p>
+		<h3>DSiWare Dumper</h3>
+			<ol>
+				<li>You'll need the <a href="https://github.com/MechanicalDragon0687/3DS-DSiWare_Dumper/releases">latest release of the DSiWare Dumper</a></li>
+				<li>You'll need your movable.sed from Seedminer.</li>
+				<li>Power off your console and put your SD card in your computer.</li>
+				<li>Copy your movable.sed to the root of your SD card.</li>
+				<li>Copy "DSiWare_Dump.3dsx" to the 3ds folder on your SD card. <i>Note: if the 3ds folder does not exist, make it. Also, the 3ds folder is NOT "Nintendo 3DS".</i></li>
+				<li>Put your SD card back in your console.</li>
+				<li>Power on and open the Homebrew Menu using your preferred access point.</li>
+				<li>Open the DSiWare Dumper from the list.</li>
+				<li>You may see several failures, but eventually one should show Success. This one will be your DSiWare dump for <a href="./fredminer.html">Fredminer.</a></li>
+			</ol>
 		
 	<div class="footer">
 	<div class="container">

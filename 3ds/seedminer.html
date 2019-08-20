@@ -1,0 +1,138 @@
+<html>
+    <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136684222-1');
+</script>
+        <title>FRII CFW CONFIRMED 11.10</title>
+        <meta name="keywords" content="nintendo, homebrew, custom firmware, 11.10, free cfw, free homebrew, frogminer, 3ds, steelhax, steelminer">
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <style>
+.box {
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-toggle-visibility {
+  font-size: 1.2em;
+  background-color: transparent;
+}</style>
+    </head>
+    <body class="animated">
+        <div class="header">
+    <div class="container">
+    <div class="logo">
+        <h1>eipHax</h1>    
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sderrors.html">SD Error Guide</a></li>
+            <li><a href="nsui.html">NSUI Guide</a></li>
+		    <li><a href="piracy.html">Piracy CliffNotes</a></li>
+		    <li><a href="https://tinydb.eiphax.tech/">TinyDB</a></li>
+		    <li><a href="issues.html">Troubleshooting</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+        <div class="container">
+        <div class="content">
+            <center><h1>Seedminer: Frii CFW for 11.10 U/E/J</h1></center>
+            <hr>
+        <!-- <p><div id="license" class="blue">Licensing: This content is provided under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC-BY-NC-ND licence</a>, with one notable addition: you may not use, read or view this content if you are Jack Sorrell, or a representative or affiliate of Jack Sorrell. If you are Jack Sorrell, or a representative or affiliate of Jack Sorrell, you must immediately navigate away from this website, and explicitly not use, read or view any of the content herein.</div> -->
+        <h1>What This Is</h1>
+        <p>Seedminer is a method of free CFW for any "3DS Family" system running firmware 11.10. There are various methods and sub methods.
+		<br>If you require support with this process, please visit <a href="https://discord.gg/C29hYvh">this Discord</a> and ask for help in the 3ds assistance channels. Mention you are following eip's Seedminer guide, which step you are up to, what method you are using and what exactly you are having issues with.
+        <h2>Who Did It (credits from zoogie)</h2>
+        <ul><li>zoogie: b9stool, frogminer, seedminer, etc, etc, etc</li>
+        <li>Martin Korth (nocash) - location hints for flipnote privkeys, no$gba, excellent Gbatek docs. I could go on.</li>
+        <li>Shutterbug2000 - ugopwn exploit. brilliant stuff!</li>
+        <li>Fincs and Wintermute - Flipnote Lenny, a revised version of ugopwn. This is the version I ported. Very clean, elegant work which made it a more manageable task for me.</li>
+        <li>zacchi4k and Chromaryu - for tools assistance, thanks a bunch!</li>
+		<li>DeadPhoenix, zoogie, Kartik and testers - for EU 11.10 Payload!</li>
+		<li>DeadPhoenix for BruteforceMovable, the bb3 tool, the Pichaxx tool, the Steelhax save injector and various other things</li>
+		<li>MrNbaYoh for Pichaxx exploit</li>
+		<li>MechanicalDragon for the DSiWare Dumper</li>
+        <li>All my peeps on the Nintendo Homebrew Discord and GBAtemp for constant support of seedminer and its users!</li>
+        <li>eip wrote this guide (if you are a smart person and have an issue with any of the content in this guide, please contact @eip &infin;#3283 on the Nintendo Homebrew discord with your complaints and or suggestions)</li></ul>
+        
+        <h2>Prep Steps</h2>
+        <ol>
+            <li>A quick test: On your console, open Download Play. It is a small orange icon with a DS console and some WiFi signals.</li>
+            <li>Then, tap "Nintendo DS". If it loads successfully and you see the old DS menu, proceed to item five.</li>
+            <li>If you only see a black screen or an error screen, exit Download Play, go to System Settings, Internet Settings, DS Connection Settings.</li>
+            <li>If this also hangs on a black screen or an error screen instead of loading to the old DS menu, <b>you will need to <a href="./twlfix.html">fix your TWL mode</b></a> then try again.</li>
+            <li>Please download and install 7-zip, the suggested archival management tool, available <a href="http://www.7zip.org/download.html" target="_blank">here.</a></li>
+            <li>Please turn file extensions ON. Instructions for Windows <a href="https://3ds.hacks.guide/file-extensions-(windows)" target=”_blank”>here.</a></li>
+        </ol>
+		<h2>Prep Steps 2: Seedminer</h2>
+		<h3>Seedminer: finding your id0</h3>
+        <ol>
+            <li>Turn your console off and take out the SD card.</li>
+            <li>Put the SD card into your computer, navigate to it and open the "Nintendo 3DS" folder.</li>
+            <li>Inside this folder, you will see one or more folders with very long, seemingly random names. Do not open any further folders.</li>
+            <li><b>If you only have ONE long named folder, skip to step 11. If you have TWO OR MORE, follow these steps in order.</b> <i>The "private" folder, if it exists, does not count.</i></li>
+            <li>Back out of your Nintendo 3DS folder to your SD root. You may see folders such as Nintendo 3DS and DCIM. This means you are in the right place.</li>
+            <li>Rename your Nintendo 3DS folder to "Nintendo BACKUP" <i>(right click and select "Rename")</i></li>
+            <li>Safely eject your SD card, put it back in your console, and power it on.</li>
+            <li>Wait for your console to generate some data.</li>
+            <li>Once you see the home menu, power off your console, take out the SD card and put it in your computer.</li>
+            <li>Navigate back to the "Nintendo 3DS" folder on your SD card. You should now only have one long named folder.</li>
+            <li>The 32 character name of this long named folder is referred to as your 'id0'.</li>
+            <li>Right click this 'id0' folder and select "Rename".</li>
+            <li>The folder name should now be blue. Right click the blue text and select "Copy". DO NOT enter or replace any text. If you accidentally enter or replace any text, press Control+Z to undo this action and restore your 'id0' name.</li>
+            <li>Left click away from the folder to deselect it, and paste (Control+V) your id0 somewhere (for example, a Notepad window).</li>
+            <li><b>IF YOU NEEDED TO RENAME THE NINTENDO 3DS FOLDER</b>: delete the "Nintendo 3DS" folder, then rename "Nintendo BACKUP" to "Nintendo 3DS". If you did NOT need to rename the "Nintendo 3DS" folder, DO NOT delete or rename anything.</li>
+        </ol>
+        
+        <h3>Seedminer: movable.sed</h3>
+        <ol>
+            <li>Go to <a href="http://bruteforcemovable.com" target="_blank">bruteforcemovable</a>.</li>
+            <li>Input your friend code and id0 into the fields given.</li>
+            <li>Complete the "I'm not a robot" CAPTCHA.</li>
+            <li>The website will give you a friend code. On your console, open the Friends List (home menu, top row, orange box with smiley face). <i>If, instead, it skips to "Done!" (step 4) and gives you the option to download your movable.sed directly, skip to step eight.</i></li>
+			<li>Press "Register Friend", then "Internet", then enter the friend code from the website.</li>
+			<li>Give it a random name. The name is not important.</li>
+            <li>Back on BruteforceMovable, the website should be on step 2. When presented the option, click "Continue". <i>If it is not on step 2, refresh the page ONCE.</i></li>
+            <li>Wait some time. Once the process is finished, you can download your "movable.sed". Put it somewhere you'll remember.</li>
+        </ol>
+		<p>
+		<h3>Next Steps</h3>
+		Got a movable.sed now? You can proceed with more stuff!
+		<br>The recommended follow-on to Seedminer is <a href="./bb3.html">BannerBomb3</a>. Once you've done BannerBomb3, you can do <a href="./fredminer.html">Fredminer</a>.
+		<br>If you need a different method, there is also <a href="./dsidump.html">Pichaxx + DSiWare Dumper</a>, after which you can do <a href="./fredminer.html">Fredminer</a.>
+		<br>If, for some reason, neither of these work for you, there is also <a href="./frogminer.html">Frogminer</a>, which is a <b>legacy method</b> and <b>not currently recommended</b>.
+	<div class="footer">
+	<div class="container">
+	<div class="nav2">
+	<ul>
+		<li><a href="./privacy.html">Privacy</a>
+		<li><a href="./signpost.html">Signpost</a></li>
+		<li><a href="./issues.html">Troubleshooting</a></li>
+		<li><a href="./donate.html">Donations</a></li>
+		<li><a href="./contact.htm">Contact</a></li>
+		<li><a href="https://nx.eiphax.tech">Switch</a></li>
+	</ul>
+	</div>
+	</div>
+	</div>
+            </div>
+            </div>
+<script>
+    document.querySelectorAll('.btn-toggle-visibility').forEach(function(currentToggleVisibilityButton) {
+  currentToggleVisibilityButton.addEventListener('click', function () {
+    document.querySelector(currentToggleVisibilityButton.getAttribute('data-target')).classList.toggle('hidden');
+  });
+ });
+</script>
+    </body>
+</html>
