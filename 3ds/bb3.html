@@ -32,7 +32,7 @@
 		<ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="sderrors.html">SD Error Guide</a></li>
-            <li><a href="nsui.html">NSUI Guide</a></li>
+            <li><a href="seedminer.html">Seedminer</a></li>
 			<li><a href="piracy.html">Piracy CliffNotes</a></li>
 			<li><a href="https://tinydb.eiphax.tech/">TinyDB</a></li>
 			<li><a href="issues.html">Troubleshooting</a></li>
@@ -46,6 +46,7 @@
             <hr>
         <p>BannerBomb3 allows us to dump some DSiWare from our system to use with Fredtool, which allows us to get CFW. To use BannerBomb3, you will need to first use Seedminer.
 		<br>If you have already used Seedminer and acquired your movable.sed, you don't need to open the Seedminer tab and can skip to BannerBomb3.
+		<p>
 		<button class="btn-toggle-visibility" data-target="#seedminer">Seedminer</button>
 		<div class="box hidden" id="seedminer">
 		<h3>Section 1: Seedminer: finding your id0</h3>
@@ -88,7 +89,7 @@
 			<li>Click "Go". You will receive a zip file (tadmuffin_out.zip).</li>
 			<li>Unzip this file and retrieve the exploit DSiWare (F00D43D5.bin).</li>
 			<li>Power off your device and put your SD card in your computer if it is not already.</li>
-			<li>Navigate to <div class="code">Nintendo 3DS > ID0 > ID1</div> on your SD card. <i>Note: The ID0 is the same one you used for Seedminer. The ID1 is the next folder inside the ID0.</li>
+			<li>Navigate to <div class="code">Nintendo 3DS > ID0 > ID1</div> on your SD card. <i>Note: The ID0 is the same one you used for Seedminer. The ID1 is the next folder inside the ID0.</i></li>
 			<li>Inside your ID1, create a folder named "Nintendo DSiWare" if it does not already exist. If it does already exist, move any existing .bin files in this folder to your computer.</li>
 			<li>Move your exploit DSiWare (F00D43D5.bin) into your Nintendo DSiWare folder.</li>
 			<li>Put your SD card back in your console.</li>
@@ -97,7 +98,8 @@
 			<li>Your screen should flash a lovely purple/magenta colour, and the console will crash to the home screen. If it does, the exploit worked.</li>
 			<li>Power off your console and put your SD card into your computer.</li>
 			<li>In your SD root, there will be a file called 42383841.bin: this is your dumped DSiWare which you can use for <a href="./fredminer.html">Fredtool.</a></li>
-			<li>Delete your F00D43D5.bin from your computer and your Nintendo DSiWare folder. Delete your tadmuffin_out.zip and the extracted folder. These are no longer needed once you have 42383841.bin.</li>
+			<li>Delete your F00D43D5.bin from your computer and your Nintendo DSiWare folder. Delete your tadmuffin_out.zip and the extracted folder. These are no longer needed once you have 42383841.bin.
+			<br>If you moved any .bin files out of the Nintendo DSiWare folder back in step 7, move them back in now.</li>
 		</div>
 		
 	<div class="footer">
