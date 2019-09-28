@@ -6,7 +6,7 @@ welcome
 # credit
 some of the content on this website and repo has been created in collaboration\
 with other users, namely crc gang and other users of the nintendo homebrew\
-server\
+server
 # scope
 this is a permanent work in progress that will change a lot as new things\
 are developed and best practices continue to be updated\
