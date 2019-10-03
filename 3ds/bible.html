@@ -1,0 +1,232 @@
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136684222-1');
+</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
+	<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136684222-1');
+	</script>
+    <title>3DS Bible</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="The Holy Bible of fixing a 3DS.">
+	<meta name="author" content="eip & friends">
+    </head>
+    <body class="animated">
+        <div class="header">
+    <div class="container">
+    <div class="logo">
+        <h1>eipHax</h1>    
+    </div>
+    <div class="nav">
+		<ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sd.html">SD Troubleshooter</a></li>
+            <li><a href="seedminer.html">Seedminer</a></li>
+			<li><a href="piracy.html">Piracy CliffNotes</a></li>
+			<li><a href="https://tinydb.eiphax.tech/">TinyDB</a></li>
+			<li><a href="issues.html">Troubleshooting</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+        <div class="container">
+        <div class="content">
+            <center><h1>eip's Troubleshooting Bible</h1></center>
+            <hr>
+        <p>This page is intended to collect, collate and maintain a list of solutions to common problems.
+		<br>This list is not exhaustive, and will likely be added to on a semi regular basis.
+		<br>Parts of this page written and created in collaboration with crc gang.
+		<br>See also: <a href="./issues.html" target="_blank">CFW install issues</a>
+		<br>See also: <a href="./sd.html" target="_blank">SD card issues</a>
+		<br>Need a hand with anything on this page? Ask us for help: <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>
+		<p>
+    <div id="page-content-wrapper">
+		<div class="container-fluid fade show active" id="operations">
+		<div class="accordion" id="accordionOperations">
+			<div class="card">
+				<div class="card-header" id="e1">
+				<h2 class="mb-0">
+				<button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				Console boots to black screen after installing boot9strap (with payload access)
+				</button>
+				</h2>
+				</div>
+				<div id="collapseOne" class="collapse" aria-labelledby="e1" data-parent="#accordionOperations">
+				<div class="card-body">
+				There are four processes below. Follow them starting from the top. If any one fixes your issue, there is no need to proceed to the next one.
+				<p><ul>
+					<li>The Luma Black Screen Bug</li>
+						<ol>
+						<li>Power off the console.</li>
+						<li>Remove any game cartridge, if one is inserted. Leave the SD card in.</li>
+						<li>Power on the console.</li>
+						<li>Leave the console powered on, and open, for 15 minutes. Do not touch the console during this time.</li>
+						<li>If the console still did not boot, see the next item.</li>
+						</ol>
+					<li>Deleting Home Menu extdata</li>
+						<ol>
+						<li>Navigate to the following folder on your SD card: <div class="code">sd:/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000</li>
+						<li>Delete the folder relevant to your region.
+						<br>USA: 0000008f
+						<br>EUR: 00000098
+						<br>JPN: 00000082
+						<br>KOR: 000000A9</li>
+						<li>Try booting again. If the console still did not boot, see the next item.</li>
+						</ol>
+					<li>Deleting Home Menu theme data</li>
+						<ol>
+						<li>Navigate to the following folder on your SD card: <div class="code">sd:/Nintendo 3DS/(32 Character ID)/(32 Character ID)/extdata/00000000</li>
+						<li>Delete the folder relevant to your region.
+						<br>USA: 000002cd
+						<br>EUR: 000002ce
+						<br>JPN: 000002cc</li>
+						<li>Try booting again. If the console still did not boot, see the next item.</li>
+						</ol>
+					<li>CTRTransfer</li>
+						<ol>
+						<li>See the 3ds.hacks.guide page <a href="https://3ds.hacks.guide/ctrtransfer.html" target="_blank">here.</a></li>
+						<li>Try booting the console again. If this still did not fix your issue, see Manual CTRTransfer in the next cell below this one.</li>
+					</ul>
+	
+				</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="e2">
+				<h2 class="mb-0">
+				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				Manual CTRTransfer (ADVANCED)
+				</button>
+				</h2>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="e2" data-parent="#accordionOperations">
+				<div class="card-body">
+				This is an advanced process which should be used after all other options have been exhausted.
+				<p><ol>
+					<li>Power off the console and remove the SD card. Connect it to your computer.</li>
+					<li>Go to <a href="https://3ds.hacks.guide/ctrtransfer.html#what-you-need" target="_blank">this page</a> and download the CTRTransfer image for your device type and region. You will need a torrent client.</li>
+					<li>If you do not already have GodMode9 on your SD card, take the time to get it now.</li>
+					<li>Once the CTRTransfer image is downloaded, place the CTRTransfer .bin and .bin.sha files in sd:/gm9/out</li>
+					<li>Right click on <a href="./assets/manual_transfer.gm9">this link</a> and select "Save As", "Save Target As", "Save Link As" or similar. It should give you a file called "manual_transfer.gm9".</li>
+					<li>Locate this file on your computer, then copy it to your SD card root directory.</li>
+					<li>Put your SD card back in your console.</li>
+					<li>Power the console on while holding START.</li>
+					<li>You should boot into GodMode9. Once you do, locate <div class="code">[S:] SYSNAND VIRTUAL</div> and select it with A.</li>
+					<li>Locate <div class="code">essential.exefs</div>. Select it with A, then select <div class="code">Copy to 0:/gm9/out</div></li>
+					<li>Once this is done, go back to the GodMode9 main window, then locate <div class="code">[0:] SDCARD</div> and select it with A.</li>
+					<li>Locate the "manual_transfer.gm9" file you put on the SD card previously. <i>If you have a lot of files on the card, try scrolling with Left/Right on the D-Pad.</i></li>
+					<li>Select this file, then select <div class="code">Execute Script</div>.</li>
+					<li>Wait for the script to complete.</li>
+					</ol>
+					<p>If this does not fix your console, you may be experiencing a hardware issue or a serious software issue which will require further attention. Need a hand? Ask us for help: <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>
+				</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="e3">
+				<h2 class="mb-0">
+				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				TITLE
+				</button>
+				</h2>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="e3" data-parent="#accordionOperations">
+				<div class="card-body">
+				CONTENT
+				
+				</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="e4">
+				<h2 class="mb-0">
+				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+				TITLE
+				</button>
+				</h2>
+				</div>
+				<div id="collapseFour" class="collapse" aria-labelledby="e4" data-parent="#accordionOperations">
+				<div class="card-body">
+				CONTENT
+				
+				</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="e5">
+				<h2 class="mb-0">
+				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+				TITLE
+				</button>
+				</h2>
+				</div>
+				<div id="collapseFive" class="collapse" aria-labelledby="e5" data-parent="#accordionOperations">
+				<div class="card-body">
+				CONTENT
+				
+				</div>
+				</div>
+			</div>
+		</div>
+		</div>
+    <!-- /#container -->
+
+  </div>
+  <!-- /#wrapper -->
+		
+	<div class="footer">
+	<div class="container">
+	<div class="nav2">
+	<ul>
+		<li><a href="./privacy.html">Privacy</a>
+		<li><a href="./signpost.html">Signpost</a></li>
+		<li><a href="./issues.html">Troubleshooting</a></li>
+		<li><a href="./donate.html">Donations</a></li>
+		<li><a href="./contact.htm">Contact</a></li>
+		<li><a href="https://nx.eiphax.tech">Switch</a></li>
+	</ul>
+	</div>
+	</div>
+	</div>
+		</div>
+		</div>
+	<!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+				</div>
+				</div>
+  <!-- BLANK CARD FOR SUBMITTING ADDITIONAL SOLUTIONS
+		Do not forget to replace the relevant id elements based on the prior element and ordering.
+		These are e1 and collapseOne.
+		There are five of them that must be changed. I have left them as a placeholder here.
+		Please ensure you coordinate with other contributors that you do not submit a colliding or overwriting ID.
+				<div class="card">
+				<div class="card-header" id="e1">
+				<h2 class="mb-0">
+				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+				TITLE
+				</button>
+				</h2>
+				</div>
+				<div id="collapseOne" class="collapse" aria-labelledby="e1" data-parent="#accordionOperations">
+				<div class="card-body">
+				CONTENT
+				
+				</div> -->
+		</body>
+</html>

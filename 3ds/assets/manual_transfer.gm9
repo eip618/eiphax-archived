@@ -1,0 +1,71 @@
+#Ctrnand fix manual
+
+#Try getting console unique files, can be provided by the user manually
+#by placing them in /gm9/out/backup/
+
+find -o -s S:/essential.exefs ESSENTIAL
+echo $[ESSENTIAL]
+
+if chk $[ESSENTIAL] ""
+    echo "essential.exefs in sysnand virtual is not accesible, using fallback."
+    find -o -s $[GM9OUT]/essential.exefs ESSENTIAL
+end
+
+if chk -u $[ESSENTIAL] ""
+    imgmount $[ESSENTIAL]
+    set BACKUP $[GM9OUT]/backup 
+    mkdir $[BACKUP]
+    
+    
+    cp -w G:/frndseed $[BACKUP]/LocalFriendCodeSeed_B 
+    cp -w G:/hwcal0 $[BACKUP]/HWCAL0.dat
+    cp -w G:/hwcal1 $[BACKUP]/HWCAL1.dat
+    cp -w G:/movable $[BACKUP]/movable.sed 
+    cp -w G:/secinfo $[BACKUP]/SecureInfo_A
+ 
+    imgumount
+    
+    cp $[ESSENTIAL] $[BACKUP]/essential.exefs
+    
+end
+
+set ERRORMSG "Missing console unique files"
+
+find $[BACKUP]/LocalFriendCodeSeed_B SEED 
+
+find $[BACKUP]/HWCAL0.dat HWCAL0 
+    
+find $[BACKUP]/HWCAL1.dat HWCAL1 
+    
+find $[BACKUP]/movable.sed MOVABLE 
+    
+find $[BACKUP]/SecureInfo_A SECINFO 
+
+set ERRORMSG "No file found or selected"
+
+if chk $[ONTYPE] "N3DS"
+    filesel "Select ctrnand image to use" $[GM9OUT]/*_ctrtransfer_n3ds.bin IMAGE
+else
+    filesel "Select ctrnand image to use" $[GM9OUT]/*_ctrtransfer_o3ds.bin IMAGE
+end
+
+set ERRORMSG "Cancelled by user"
+
+ask "The scripts is about to write to ctrnand\ncontinue?"
+allow S:
+set ERRORMSG "Failed injecting ctrnand image"
+inject -n $[IMAGE] S:/ctrnand_full.bin@0
+set ERRORMSG "Failed copying LocalFriendCodeSeed_B"
+cp -w $[SEED] 1:/rw/sys/LocalFriendCodeSeed_B
+set ERRORMSG "Failed copying SecureInfo_A"
+cp -w $[SECINFO] 1:/rw/sys/SecureInfo_A
+set ERRORMSG "Failed copying HWCAL0.dat"
+cp -w $[HWCAL0] 1:/ro/sys/HWCAL0.dat
+set ERRORMSG "Failed copying HWCAL1.dat"
+cp -w $[HWCAL1] 1:/ro/sys/HWCAL1.dat
+set ERRORMSG "Failed copying movable.sed"
+cp -w $[MOVABLE] 1:/private/movable.sed
+
+fixcmac 1:/
+
+echo "Manual Ctrnand transfer done succesfully"
