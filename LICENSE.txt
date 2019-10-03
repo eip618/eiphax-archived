@@ -1,3 +1,6 @@
 CC-BY-NC-ND
 Creative Commons: attribution, no commercial use, no derivatives
 https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+Parts of this project are used under and licensed by the MIT License
+https://tldrlegal.com/license/mit-license
