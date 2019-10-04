@@ -48,12 +48,14 @@
         <div class="content">
             <center><h1>eip's Troubleshooting Bible</h1></center>
             <hr>
-        <p>This page is intended to collect, collate and maintain a list of solutions to common problems.
+        <p><div class="blue-inline">This page is intended to collect, collate and maintain a list of solutions to common problems.
 		<br>This list is not exhaustive, and will likely be added to on a semi regular basis.
 		<br>Parts of this page written and created in collaboration with crc gang.
 		<br>See also: <a href="./issues.html" target="_blank">CFW install issues</a>
-		<br>See also: <a href="./sd.html" target="_blank">SD card issues</a>
-		<br>Need a hand with anything on this page? Ask us for help: <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>
+		<br>See also: <a href="./sd.html" target="_blank">SD card issues</a></div>
+		<br><div class="info-inline">Please read carefully and ensure you understand the instructions.</div>
+		<br><div class="warning-inline">Some of the processes on this page are potentially destructive. Use caution and common sense.
+		<br>If you need help or do not understand anything, ask us for help: <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a></div>
 		<p>
     <div id="page-content-wrapper">
 		<div class="container-fluid fade show active" id="operations">
@@ -116,7 +118,8 @@
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="e2" data-parent="#accordionOperations">
 				<div class="card-body">
-				This is an advanced process which should be used after all other options have been exhausted.
+				<div class="warning-inline">This is an advanced process which should only be used after all other options have been exhausted.
+				<br>Do not attempt this process by yourself. Ask us for help: <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a></div>
 				<p><ol>
 					<li>Power off the console and remove the SD card. Connect it to your computer.</li>
 					<li>Go to <a href="https://3ds.hacks.guide/ctrtransfer.html#what-you-need" target="_blank">this page</a> and download the CTRTransfer image for your device type and region. You will need a torrent client.</li>
@@ -141,14 +144,20 @@
 				<div class="card-header" id="e3">
 				<h2 class="mb-0">
 				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				TITLE
+				Recovery Mode/Safe Mode Update
 				</button>
 				</h2>
 				</div>
 				<div id="collapseThree" class="collapse" aria-labelledby="e3" data-parent="#accordionOperations">
 				<div class="card-body">
-				CONTENT
-				
+				This can be used for most general circumstances and should not be destructive. Use cases: random crashes, broken titles, console not booting after suggested fixes
+				<p>
+				<ol>
+					<li>Turn the console off.</li>
+					<li>Hold the following buttons: [Left Shoulder, Right Shoulder, D-Pad Up, A] then power the console on.</li>
+					<li>This should boot you into Safe Mode. It should prompt a system update. It will require access to the Internet.</li>
+					<li>Accept the update.</li>
+				</ol>				
 				</div>
 				</div>
 			</div>
@@ -156,14 +165,18 @@
 				<div class="card-header" id="e4">
 				<h2 class="mb-0">
 				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-				TITLE
+				Remove Home Menu Management information from CTRNand
 				</button>
 				</h2>
 				</div>
 				<div id="collapseFour" class="collapse" aria-labelledby="e4" data-parent="#accordionOperations">
 				<div class="card-body">
-				CONTENT
-				
+				This process may reset your Home Menu data, such as theme orders, folders and notifications.
+				<p><ol>
+					<li>Turn the console off.</li>
+					<li>Hold the following buttons: [Left Shoulder, Right Shoulder, D-Pad Down, B] then power the console on.</li>
+					<li>The console should boot to home menu.</li>
+				</ol>
 				</div>
 				</div>
 			</div>
