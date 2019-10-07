@@ -53,7 +53,7 @@
 		<br>Parts of this page written and created in collaboration with crc gang.
 		<br>See also: <a href="./issues.html" target="_blank">CFW install issues</a>
 		<br>See also: <a href="./sd.html" target="_blank">SD card issues</a></div>
-		<br><div class="info-inline">Please read carefully and ensure you understand the instructions.</div>
+		<br><div class="info-inline">Please read carefully and ensure you understand the instructions. Any processes marked [ADVANCED] should be performed only under guidance.</div>
 		<br><div class="warning-inline">Some of the processes on this page are potentially destructive. Use caution and common sense.
 		<br>If you need help or do not understand anything, ask us for help: <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a></div>
 		<p>
@@ -64,7 +64,7 @@
 				<div class="card-header" id="e1">
 				<h2 class="mb-0">
 				<button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				Console boots to black screen after installing boot9strap (with payload access)
+				<b>[1]</b> Console boots to black screen after installing boot9strap (with payload access)
 				</button>
 				</h2>
 				</div>
@@ -112,7 +112,7 @@
 				<div class="card-header" id="e2">
 				<h2 class="mb-0">
 				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-				Manual CTRTransfer (ADVANCED)
+				<b>[2]</b> Manual CTRTransfer [ADVANCED]
 				</button>
 				</h2>
 				</div>
@@ -144,7 +144,7 @@
 				<div class="card-header" id="e3">
 				<h2 class="mb-0">
 				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-				Recovery Mode/Safe Mode Update
+				<b>[3]</b> Recovery Mode/Safe Mode Update
 				</button>
 				</h2>
 				</div>
@@ -165,13 +165,13 @@
 				<div class="card-header" id="e4">
 				<h2 class="mb-0">
 				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-				Remove Home Menu Management information from CTRNand
+				<b>[4]</b> Remove Home Menu Management information from CTRNand
 				</button>
 				</h2>
 				</div>
 				<div id="collapseFour" class="collapse" aria-labelledby="e4" data-parent="#accordionOperations">
 				<div class="card-body">
-				This process may reset your Home Menu data, such as theme orders, folders and notifications.
+				This process may reset your Home Menu data, such as theme orders, folders and notifications. Use cases: console not booting after suggested fixes
 				<p><ol>
 					<li>Turn the console off.</li>
 					<li>Hold the following buttons: [Left Shoulder, Right Shoulder, D-Pad Down, B] then power the console on.</li>
@@ -184,14 +184,23 @@
 				<div class="card-header" id="e5">
 				<h2 class="mb-0">
 				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-				TITLE
+				<b>[5]</b> Delete system save data [ADVANCED]
 				</button>
 				</h2>
 				</div>
 				<div id="collapseFive" class="collapse" aria-labelledby="e5" data-parent="#accordionOperations">
 				<div class="card-body">
-				CONTENT
-				
+				This process will reset your system save data, which will include any Miis you have made and your friend list.
+				<br>This should generally not be attempted unless you have been advised to perform this process. Use cases: console not booting after suggested fixes
+				<p><ol>
+					<li>Boot your system to GodMode9 by holding START during boot.</li>
+					<li>Navigate to <div class="code">[1:] SYSNAND CTRNAND > data</div></li>
+					<li>In this folder, there should be another folder, the name of which is 32 random characters. You may recognise this as your id0.</li>
+					<li>Press Right Shoulder + A to bring up directory options, then select <div class="code">Copy to 0:/gm9/out</div>.</li>
+					<li>Once complete, press X on this folder to delete it.</li>
+					<li>On the following prompt, press A.</li>
+				</ol>
+				<p>Your system save data has been reset.				
 				</div>
 				</div>
 			</div>
@@ -224,15 +233,15 @@
 				</div>
 				</div>
   <!-- BLANK CARD FOR SUBMITTING ADDITIONAL SOLUTIONS
-		Do not forget to replace the relevant id elements based on the prior element and ordering.
-		These are e1 and collapseOne.
-		There are five of them that must be changed. I have left them as a placeholder here.
+		Do not forget to replace the relevant elements based on the prior element and ordering.
+		These are e1 and collapseOne along with the title card number.
+		There are six of them that must be changed. I have left them as a placeholder here.
 		Please ensure you coordinate with other contributors that you do not submit a colliding or overwriting ID.
 				<div class="card">
 				<div class="card-header" id="e1">
 				<h2 class="mb-0">
 				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-				TITLE
+				<b>[X]</b> TITLE
 				</button>
 				</h2>
 				</div>
