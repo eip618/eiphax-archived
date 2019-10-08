@@ -190,6 +190,7 @@
 				</div>
 				<div id="collapseFive" class="collapse" aria-labelledby="e5" data-parent="#accordionOperations">
 				<div class="card-body">
+				<div class="warning-inline">This process is destructive and should not be attempted without guidance.</div>
 				This process will reset your system save data, which will include any Miis you have made and your friend list.
 				<br>This should generally not be attempted unless you have been advised to perform this process. Use cases: console not booting after suggested fixes
 				<p><ol>
@@ -204,6 +205,34 @@
 				</div>
 				</div>
 			</div>
+			<div class="card">
+				<div class="card-header" id="e6">
+				<h2 class="mb-0">
+				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+				<b>[6]</b> Injecting N3DS donor NAND header [ADVANCED]
+				</button>
+				</h2>
+				</div>
+				<div id="collapseSix" class="collapse" aria-labelledby="e6" data-parent="#accordionOperations">
+				<div class="card-body">
+				<div class="warning-inline">This process is destructive and should not be attempted without guidance.</div>
+				<p>This process should only be used under explicit circumstances and should not be used for general purposes.
+				<br>This process will render your TWLfirm permanently unusable on stock firmware. Your TWLfirm runs original DS games. So long as you never uninstall CFW, this will not be a problem.
+				<p><ol>
+					<li>Power off your console, eject the SD card and connect it to your computer.</li>
+					<li>Download the <a href="./assets/NCSD_header_n3ds.hdr">donor header</a> (right click > Save Target As or similar).</li>
+					<li>Place the file you just downloaded on your root directory.</li>
+					<li>Boot your console into GodMode9 by holding START during boot.</li>
+					<li>Open <div class="code">[0:] SDCARD</div>.</li>
+					<li>Locate <div class="code">NCSD_header_n3ds.hdr</div> and press Y to copy it. It should show up under CLIPBOARD in the top right of the bottom screen.</li>
+					<li>Back out to the GodMode9 main window and open <div class="code">[S:] SYSNAND VIRTUAL</div>.</li>
+					<li>Select <div class="code">nand_hdr.bin > Inject data @offset</div>.</li>
+					<li>Press A. You will be met with a write unlock prompt. Press A again.</li>
+					<li>You will see a red screen warning you about SysNAND level 3 unlock. Enter the button combination on the screen to proceed.</li>
+				</ol>
+				<p>You have successfully injected a donor NAND header.
+			</div>
+			<!-- last card div -->
 		</div>
 		</div>
     <!-- /#container -->
