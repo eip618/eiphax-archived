@@ -4,7 +4,6 @@
 #by placing them in /gm9/out/backup/
 
 find -o -s S:/essential.exefs ESSENTIAL
-echo $[ESSENTIAL]
 
 if chk $[ESSENTIAL] ""
     echo "essential.exefs in sysnand virtual is not accesible, using fallback."
@@ -26,19 +25,14 @@ if chk -u $[ESSENTIAL] ""
     imgumount
     
     cp $[ESSENTIAL] $[BACKUP]/essential.exefs
-    
 end
 
 set ERRORMSG "Missing console unique files"
 
 find $[BACKUP]/LocalFriendCodeSeed_B SEED 
-
-find $[BACKUP]/HWCAL0.dat HWCAL0 
-    
-find $[BACKUP]/HWCAL1.dat HWCAL1 
-    
-find $[BACKUP]/movable.sed MOVABLE 
-    
+find $[BACKUP]/HWCAL0.dat HWCAL0     
+find $[BACKUP]/HWCAL1.dat HWCAL1     
+find $[BACKUP]/movable.sed MOVABLE     
 find $[BACKUP]/SecureInfo_A SECINFO 
 
 set ERRORMSG "No file found or selected"
@@ -56,16 +50,20 @@ allow S:
 set ERRORMSG "Failed injecting ctrnand image"
 inject -n $[IMAGE] S:/ctrnand_full.bin@0
 set ERRORMSG "Failed copying LocalFriendCodeSeed_B"
-cp -w $[SEED] 1:/rw/sys/LocalFriendCodeSeed_B
+cp -n -w $[SEED] 1:/rw/sys/LocalFriendCodeSeed_B
 set ERRORMSG "Failed copying SecureInfo_A"
-cp -w $[SECINFO] 1:/rw/sys/SecureInfo_A
+cp -n -w $[SECINFO] 1:/rw/sys/SecureInfo_A
 set ERRORMSG "Failed copying HWCAL0.dat"
-cp -w $[HWCAL0] 1:/ro/sys/HWCAL0.dat
+cp -n -w $[HWCAL0] 1:/ro/sys/HWCAL0.dat
 set ERRORMSG "Failed copying HWCAL1.dat"
-cp -w $[HWCAL1] 1:/ro/sys/HWCAL1.dat
+cp -n -w $[HWCAL1] 1:/ro/sys/HWCAL1.dat
 set ERRORMSG "Failed copying movable.sed"
-cp -w $[MOVABLE] 1:/private/movable.sed
+cp -n -w $[MOVABLE] 1:/private/movable.sed
+set ERRORMSG "Failed to fix sysnand ctrnand cmacs for dbs"
+fixcmac 1:/dbs
+set ERRORMSG "Failed to fix sysnand ctrnand cmacs for data"
+fixcmac 1:/data
+set ERRORMSG "Failed to fix sysnand ctrnand cmacs for private"
+fixcmac 1:/private
 
-fixcmac 1:/
-
-echo "Manual Ctrnand transfer done succesfully"
+echo "Manual Ctrnand transfer done successfully"
