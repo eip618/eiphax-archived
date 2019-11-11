@@ -488,7 +488,7 @@ font-weight:normal;
   color: #d2dcef !important;
 }
 .container{
-  width: 960px;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -520,9 +520,7 @@ font-weight:normal;
   margin-left: 15px;
   padding-top: 15px;
 }
-.nav {
-  float: right;
-}
+
 .nav2 a {
   color: #d2dcef;
   text-decoration: none;
