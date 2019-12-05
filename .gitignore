@@ -5,3 +5,5 @@ package.json
 .browserslistrc
 .travis.yml
 LICENSE
+dead.letter
+blog
