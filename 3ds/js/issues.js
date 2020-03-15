@@ -1,7 +1,7 @@
 const ids = {
   categories: ['steel', 'pic', 'bannerbomb', 'frog', 'fred', 'flip', 'ntr'],
   steel: ['steel1', 'steel2', 'steel3', 'steel4', 'steel5', 'steel6', 'steel7', 'steel8', 'steel9', 'steel10'],
-  pic: ['pic1', 'pic2', 'pic3', 'pic4', 'pic5', 'pic6'],
+  pic: ['pic1', 'pic2', 'pic3', 'pic4', 'pic5', 'pic6', 'pic7'],
   bannerbomb: ['bb1', 'bb2', 'bb3', 'bb4'],
   frog: {
     main: ['update', 'frogtable'],
