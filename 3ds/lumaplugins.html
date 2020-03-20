@@ -1,0 +1,124 @@
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136684222-1');
+</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
+	<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136684222-1');
+	</script>
+    <title>Luma3ds plugin loader guide</title>
+    <link rel="stylesheet" media="screen and (min-width: 1000px)" href="main.css" type="text/css"> <link rel="stylesheet" media="screen and (max-width: 1000px)" href="main-mini.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body class="animated">
+        <div class="header">
+    <div class="container">
+    <div class="logo">
+        <h1>eipHax</h1>    
+    </div>
+    <div class="nav">
+		<ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sd.html">SD Troubleshooter</a></li>
+            <li><a href="nav.html">Site Nav</a></li>
+	    <li><a href="https://tinydb.eiphax.tech/">TinyDB</a></li>
+	    <li><a href="issues.html">Troubleshooting</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+        <div class="container">
+        <div class="content">
+            <center><h1>Luma3ds plugin loader guide</h1></center>
+            <hr>
+            <p>This guide will teach you how to install and use 2 custom luma forks with different plugin types</p>
+            <p>Credit to <code>It'sPizzaTime#4530</code> on discord for the images and the rest of this terrible guide</p>
+            <p>If you're trying to use the ACNL plugin you need to follow the steps in the <a href="https://discord.gg/EZSxqRr">AC Modding Hub</a></p>
+            <h2 id="requirements">Requirements</h2>
+            <ul>
+            <li>A console with boot9strap installed</li>
+            <li>A plugin file you want to use (<code>.3gx</code> or <code>.plg</code>), if you don't have any you can find them by doing a quick google search, here's a list of some good ones:</li>
+            </ul>
+            <p>Pokemon Ultra Sun and Ultra Moon: <a href="https://gbatemp.net/threads/release-ultrasumoframework-ntr-plugin-for-ultra-sumo.489098/">ultraSuMoFramework</a></p>
+            <p>Pokemon Sun and Moon: <a href="https://github.com/AnalogMan151/sumoCheatMenu/releases">sumoCheatMenu</a></p>
+            <p>Mario Kart 7: <a href="https://github.com/DarkFlare69/MK7-Online-NTR-Plugin-v3/raw/master/MarioKart7.3gx">Mario Kart 7 Online NTR Plugin</a></p>
+            <p>The Legend of Zelda: Ocarina of Time 3D: <a href="https://github.com/Nanquitas/Zelda-Ocarina-Of-Time-3D-Plugin">Zelda-Ocarina-Of-Time-3D-Plugin</a></p>
+            <p>Assorted Games: <a href="https://www.maxconsole.com/attachments/ctrpf-plugins-master-zip.9248/">CTRPF Plugins 3.0</a></p>
+            <h2 id="installing-plugin-type-plg">Installing plugin type <code>.plg</code></h2>
+            <ol>
+            <li>Download the <code>boot.firm</code> from <a href="http://badda.de/lumamod/Luma3DS_v9.1-7-gbd15f_mod.7z">here</a> and place it on your sd root, make sure you overwrite the current one.</li>
+            <li>Rename your <code>.plg</code> file to <code>plugin.plg</code></li>
+            <li>Make a folder called <code>plugins</code> if it doesn't already exist in the <code>luma</code> folder on your sd</li>
+            <li>Inside of the <code>plugins</code> folder make a folder named the titleid of the game you want to use the plugin file for (If you don't know the game titleid you can find a list <a href="http://3dsdb.com">here</a> or <a href="https://hax0kartik.github.io/3dsdb/">here</a>)</li>
+            <li>
+            <p>Place the <code>plugin.plg</code> file in the folder you just created, if you are having trouble understanding here's an example that might help: <br>
+            <img alt="plg location" src="./pic/lumaplugins1.png"><br>
+            (in this example <code>00040000001B5100</code> is Pokemon Ultra Moon's titleid)</p>
+            </li>
+            <li>Insert your sd card into your 3ds and boot it up, if you get a luma config screen select <code>Show NAND or user string in System Settings</code> and press start
+            </li>
+            <li>Once you're in the home menu, open the rosalina menu (L + Dpad Down + Select by default) and select <code>Enable Plugin Loader</code></li>
+            <li>Press B to exit the rosalina menu<br><strong>(note: if the plugin loader is enabled the option will say <code>Disable Plugin Loader</code> and if the plugin loader is disabled the option will say <code>Enable Plugin Loader</code>)</strong><br></li>
+            <li>When you launch the game you setup a plugin for your screen should flash green during the Nintendo 3ds splash</li>
+            <li>The standard for cheat menus is the select button, if pressing select doesn't work consider reading the readme of the plugin you're using</li>
+            </ol>
+            <h2 id="installing-plugin-type-3gx">Installing plugin type <code>.3gx</code></h2>
+            <ol>
+            <li>Download the <code>boot.firm</code> from <a href="https://github.com/mariohackandglitch/Luma3DS/releases/latest/">here</a> and place it on your sd root, make sure you overwrite the current one.</li>
+            <li>Make a folder called <code>plugins</code> if it doesn't already exist in the <code>luma</code> folder on your sd</li>
+            <li>Inside of the <code>plugins</code> folder make a folder named the titleid of the game you want to use the plugin file for (If you don't know the game titleid you can find a list <a href="http://3dsdb.com">here</a> or <a href="https://hax0kartik.github.io/3dsdb/">here</a>)</li>
+            <li>Place your <code>.3gx</code> file in the folder you just created, here is an example that could be helpful:
+            <img alt="3gx location" src="./pic/lumaplugins2.png"> <br> (in this example <code>0004000000030800</code> is Mario Kart 7 Rev 01 USA's titleid)</li>
+            <li>Insert your sd into your 3ds and boot it up, if you get a luma config screen select <code>Show NAND or user string in System Settings</code> and press start</li>
+            <li>Once you're in the home menu, open the rosalina menu (L + Dpad Down + Select by default) and enable the plugin loader</li>
+            <li>Press B to exit rosalina</li>
+            <li>Open the game you installed a plugin for, your screen should flash green or blue during the Nintendo 3ds splash</li>
+            <li>The standard for cheat menus is the select button, if pressing select doesn't work consider reading the readme of the plugin you're using</li>
+            </ol>
+            <h2 id="optional-how-to-switch-between-3gx-and-plg-loader-luma-easily">(Optional) How to switch between <code>3gx</code> and <code>plg</code> loader luma easily</h2>
+            <ol>
+            <li>Download both <code>boot.firm</code>'s (<a href="https://github.com/mariohackandglitch/Luma3DS/releases/latest/">Luma 3gx Loader</a> | <a href="http://badda.de/lumamod/Luma3DS_v9.1-7-gbd15f_mod.7z">Luma plg loader</a>)</li>
+            <li>Rename both <code>boot.firm</code>'s to something else like <code>Luma3ds_3gx_loader.firm</code> for the <code>3gx</code> loader and <code>Luma3ds_plg_loader.firm</code> for the <code>plg</code> loader</li>
+            <li>Download and install <a href="https://github.com/SaturnSH2x2/PayloadSpinner3DS/releases/latest">PayloadSpinner3ds</a> on your 3ds. Here is a QR you can scan with FBI (FBI -&gt; Remote Install -&gt; Scan QR Code)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="PayloadSpinner3ds QR" src="./pic/lumaplugins3.png"></li>
+            <li>Once it's done installing, exit to your home menu and open the app once. It should say <code>No payloads were found. Refer to README</code>, just press A to exit</li>
+            <li>Place both firm files in <code>/3ds/data/PayloadSpinner3DS/payloads</code> on your sd like this:
+            <img alt="PayloadSpinner3ds payload location" src="./pic/lumaplugins4.png"><br>
+              Now when you want to switch between luma plg loader and luma 3gx loader you can open PayloadSpinner3DS and select whichever one you want to use</li>
+            </ol>
+            <h2 id="troubleshooting">Troubleshooting</h2>
+            <h3 id="game-crashes-when-using-a-plugin"><strong>Game crashes when using a plugin</strong></h3>
+            <p>Fix: Don't use that plugin</p>
+            <h3 id="screen-doesnt-flash-and-plugin-doesnt-load"><strong>Screen doesn't flash and plugin doesn't load</strong></h3>
+            <p>Fix: Check if you got the right titleid, if you're sure you did try a different plugin</p>
+		
+	<div class="footer">
+	<div class="container">
+	<div class="nav2">
+	<ul>
+		<li><a href="./privacy.html">Privacy</a>
+		<li><a href="./signpost.html">Signpost</a></li>
+		<li><a href="./issues.html">Troubleshooting</a></li>
+		<li><a href="./donate.html">Donations</a></li>
+		<li><a href="./contact.htm">Contact</a></li>
+		<li><a href="https://nx.eiphax.tech">Switch</a></li>
+	</ul>
+	</div>
+	</div>
+	</div>
+		</div>
+		</div>
+		</body>
+</html>
