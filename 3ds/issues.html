@@ -75,6 +75,9 @@ th, td {
                     <th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('pic')">Pichaxx</button></th>
                     <th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('bannerbomb')">BannerBomb3</button></th>
 				</tr>
+				<tr>
+                    <th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('usm')">USM</button></th>
+				</tr>
             </table>
 			</center>
             <p>Clicking a solution or tool will overwrite the previous one with the one most recently clicked.
@@ -447,6 +450,43 @@ th, td {
 		</div>
 	<div class="box hidden" id="bb4">
 		</div> -->
+		<!-- USM LEADING DIV -->
+	<div class="box hidden" id="usm"><center>
+	    <table>
+	        <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('usm1')"><a href="#usm1">Data Management does nothing/is empty</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('usm2')"><a href="#usm2">Safe Mode doesn't do what it's meant to</a></button></td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('usm3')"><a href="#usm3">Data Management crashes, but without flashing</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('usm4')"><a href="#usm4">Can't boot Safe Mode</a></button></td>
+	        </tr>
+		</table>
+		</center>
+		</div>
+		<!-- USM ISSUE DIVS -->
+	<div class="box hidden" id="usm1">
+	<h3>No crash</h3>
+	<br>Usually, this error is caused by the exploit DSiWare (F00D43D5.bin) being misplaced.
+	<p><img src="pic/bb1.png">
+	<p>This is an example of an <b>incorrect</b> placement. In this example, the 30ff... folder, outlined in blue, is the ID0. The c7aa... folder, outlined in red, is the ID1. The Nintendo DSiWare folder must be INSIDE the ID1.
+	<p><img src="pic/bb2.png">
+	<p>This is another example of <b>incorrect</b> placement. Here, the exploit DSiWare (F00D43D5.bin) exists, but is not placed in the DSiWare folder.
+	<p><img src="pic/bb3.png">
+	<p>This example is <b>correct</b> placement. The exploit DSiWare exists, is in the right folder, and the folder is inside the ID0 and ID1.
+		</div>
+	<div class="box hidden" id="usm2">
+	<h3>Safe Mode too safe</h3>
+	<br>Usually, the only way to cause this is by not having followed the guide correctly. Ensure that DSiWare Data Management crashes into a RED screen and that 'usm.bin' is on the root directory when you boot Safe Mode.
+		</div>
+	<div class="box hidden" id="usm3">
+	<h3>Crash</h3>
+	<br>Have you ever uninstalled CFW before? If so, try <a href="./twlfix.html">TWLfix</a>, then try USM again.
+		</div>
+	<div class="box hidden" id="usm4">
+	<h3>Won't boot</h3>
+	<br>If you can't boot to Safe Mode, either one or more of your buttons are broken, or you're not holding them right. Safe Mode is a function of all 3DS family consoles and cannot be overridden or deleted.
+		</div>
 		<!-- NTRBOOT LEADING DIV -->
 	<div class="box hidden" id="ntr">
         <p><center>You got me! There's nothing here yet.</center>

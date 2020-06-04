@@ -1,8 +1,9 @@
 const ids = {
-  categories: ['steel', 'pic', 'bannerbomb', 'frog', 'fred', 'flip', 'ntr'],
+  categories: ['steel', 'pic', 'bannerbomb', 'usm', 'frog', 'fred', 'flip', 'ntr'],
   steel: ['steel1', 'steel2', 'steel3', 'steel4', 'steel5', 'steel6', 'steel7', 'steel8', 'steel9', 'steel10'],
   pic: ['pic1', 'pic2', 'pic3', 'pic4', 'pic5', 'pic6', 'pic7'],
   bannerbomb: ['bb1', 'bb2', 'bb3', 'bb4'],
+  usm: ['usm1', 'usm2', 'usm3', 'usm4'],
   frog: {
     main: ['update', 'frogtable'],
     sub: ['frog1', 'frog2', 'frog3', 'frog4', 'frog5'],
@@ -28,6 +29,10 @@ function singleIssueDivsPic(idSelf = '') {
 
 function singleIssueDivsBannerbomb(idSelf = '') {
   toggle(ids.bannerbomb, idSelf);
+}
+
+function singleIssueDivsUSM(idSelf = '') {
+  toggle(ids.usm, idSelf);
 }
 
 function singleIssueDivsFrog(idSelf = '') {
