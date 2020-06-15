@@ -397,7 +397,8 @@ html {
 }
 
 tr {
-  padding: 30px;
+  border-collapse:separate;
+  border-spacing: 0 10px;
 }
 
 td {

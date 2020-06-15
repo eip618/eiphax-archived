@@ -493,7 +493,8 @@ font-weight:normal;
   margin-bottom: 50px;
 }
 tr {
-  padding: 30px;
+  border-collapse:separate;
+  border-spacing: 0 10px;
 }
 td {
   text-align: center;
