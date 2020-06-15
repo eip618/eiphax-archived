@@ -492,13 +492,11 @@ font-weight:normal;
   margin: 0 auto;
   margin-bottom: 50px;
 }
-tr {
-  border-collapse:separate;
-  border-spacing: 0 10px;
-}
 td {
   text-align: center;
   border: 3px solid white;
+  border-collapse:separate;
+  border-spacing: 0 10px;
 }
 td:nth-child(even) {background-color: #d2dcef;}
 .header {
