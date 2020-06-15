@@ -407,8 +407,8 @@ td {
   border: 3px solid #d2dcef;
 }
 
-td:nth-child(even) {background-color: #d2dcef;}
-  
+tr:nth-child(even) {background-color: #d2dcef;}
+
 .footer {
   position: fixed;
   left: 0;
