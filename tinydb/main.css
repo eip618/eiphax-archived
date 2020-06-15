@@ -396,12 +396,15 @@ html {
  background: #2E3440 !important;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 2px 10px;
+}
+
 td {
   text-align: center;
   padding: 5px;
   border: 3px solid white;
-  border-collapse: separate;
-  border-spacing: 2px 10px;
 }
 
 td:nth-child(even) {background-color: #d2dcef;}
