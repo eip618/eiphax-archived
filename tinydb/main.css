@@ -395,6 +395,18 @@ fieldset:disabled a.btn {
 html {
  background: #2E3440 !important;
 }
+
+tr {
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+  border: 3px solid white;
+}
+
+td:nth-child(even) {background-color: #d2dcef;}
+  
 .footer {
   position: fixed;
   left: 0;

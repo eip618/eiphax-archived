@@ -492,6 +492,14 @@ font-weight:normal;
   margin: 0 auto;
   margin-bottom: 50px;
 }
+tr {
+  padding: 10px;
+}
+td {
+  text-align: center;
+  border: 3px solid white;
+}
+td:nth-child(even) {background-color: #d2dcef;}
 .header {
   background: #434c5e;
   width: 100%;
