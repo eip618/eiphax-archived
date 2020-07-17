@@ -47,7 +47,7 @@ label, span { color: white }
         <div class="content">
             <center><h1>Config Generator</h1></center>
 	<hr>
-	<p>Generously ideated and provided by @Mr. Burguers#4073 on Discord.
+	<p>Generously ideated and provided by Mr. Burguers on Discord.
 	<p><label><input type="checkbox" id="singleOption0"> Autoboot EmuNAND</label><br>
 <label><input type="checkbox" id="singleOption1"> Use EmuNAND FIRM if booting with R</label><br>
 <label><input type="checkbox" id="singleOption2"> Enable loading external FIRMs and modules</label><br>
@@ -56,6 +56,7 @@ label, span { color: white }
 <label><input type="checkbox" id="singleOption5"> Show GBA boot screen in patched AGB_FIRM</label><br>
 <label><input type="checkbox" id="singleOption6"> Set developer UNITINFO</label><br>
 <label><input type="checkbox" id="singleOption7"> Disable ARM11 exception handlers</label><br>
+<label><input type="checkbox" id="singleOption8"> Enable Rosalina on SAFE_FIRM</label><br>
 <br>
 <label>Default EmuNAND <select id="multiOption0">
 	<option value="0">1</option>
@@ -110,10 +111,10 @@ label, span { color: white }
 
 
 <script>
-// According to Luma 10.0.1, 10.0 and 9.1
+// According to Luma 10.2
 const CONFIG_VERSIONMAJOR = 2;
-const CONFIG_VERSIONMINOR = 3;
-const singleOptionsAmount = 8;
+const CONFIG_VERSIONMINOR = 4;
+const singleOptionsAmount = 9;
 const multiOptionsAmount = 6;
 const configData = {
 	magic: 1179537219,
@@ -131,8 +132,8 @@ function GetEnableMultiOption(i) {
 }
 function WriteConfig() {
 	const hblTitle = document.getElementById('hbldr3dsxTitleId').value;
-	if (!(/00040000[0-9a-f]{8}/i).test(hblTitle)) {
-		alert('The Homebrew Loader Title ID is invalid.\nCheck if it is 16 characters long, starts with 00040000 and contains only hexadecimal characters.');
+	if (!(/0004[0-9a-f]{12}/i).test(hblTitle)) {
+		alert('The Homebrew Loader Title ID is invalid.\nCheck it starts with 0004 and contains only hexadecimal characters.');
 		return;
 	}
 
@@ -147,8 +148,6 @@ function WriteConfig() {
 	}
 
 	// This has to be a BigInt so we can use setBigUint64
-	// Converting this to an Int to parse hexadecimal and then to a BigInt can lose precision,
-	// but since it should always start with 00040000 that doesn't really matter
 	configData.hbldr3dsxTitleId = BigInt(parseInt(hblTitle, 16));
 
 	configData.rosalinaMenuCombo = 0;
