@@ -49,7 +49,7 @@
             <center><h1>Switch Ban Essentials: Q&A</h1></center>
             <hr>
 			<p>Bans are scary and Nintendo hasn’t been shy about banning hacked Switch consoles. However, educated hackers know that bans are avoidable and they know how to avoid them. The Q&A below should answer any questions you may have on how bans work and how to avoid getting your console banned.
-			<p>This guide was written by Discord user Gunther#8698. Click on a question below to reveal the answer. If you have further questions, you can ask on the <a href="https://discord.gg/C29hYvh">Nintendo Homebrew Discord server</a>.
+			<p>This guide was written by Discord user Gunther#8698 (and eip). Click on a question below to reveal the answer. If you have further questions, you can ask on the <a href="https://discord.gg/C29hYvh">Nintendo Homebrew Discord server</a>.
         <p>
 	<div id="page-content-wrapper">
 		<div class="container-fluid fade show active" id="operations">
@@ -94,7 +94,7 @@
 				<h4>The following actions have not resulted in a ban (so far):</h4>
 				<ul>
 					<li>Atmosphere itself</li>
-					<li>Homebrew (via title takeover)</li>
+					<li>Using the Homebrew Menu (via launch takeover, eg by album or a gamecart/installed title)</li>
 					<li>Custom themes</li>
 					<li>Custom sysmodules</li>
 					<li>Mods/cheating in offline games</li>
@@ -115,7 +115,7 @@
 				</div>
 				<div id="collapseThree" class="collapse" aria-labelledby="e3" data-parent="#accordionOperations">
 				<div class="card-body">
-				Nintendo filled the Switch with telemetry systems. Telemetry systems basically monitor what the user does on the console, including what games they install, what games they play, and a bunch of other data too. The Nintendo Switch stores this data constantly, even while offline, and will send these data logs to Nintendo as soon as it connects to the internet and Nintendo’s servers. This means that if a bannable action is performed on the Switch (even while offline) and the console connects to the internet at any point afterward, even briefly, Nintendo will receive the telemetry log and ban the console.
+				Nintendo has significantly upgraded the quality of their telemetry systems. Telemetry systems basically monitor what the user does on the console, including what games they install, what games they play, and a bunch of other data too. The Nintendo Switch stores this data constantly, even while offline, and will send these data logs to Nintendo as soon as it connects to the internet and Nintendo’s servers. This means that if a bannable action is performed on the Switch (even while offline) and the console connects to the internet at any point afterward, even briefly, Nintendo will receive the telemetry log and ban the console.
 				</div>
 				</div>
 			</div>
@@ -182,15 +182,17 @@
 				<div class="card-header" id="e8">
 				<h2 class="mb-0">
 				<button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-				<b>[8]</b> What about Incognito Mode?
+				<b>[8]</b> What about Incognito/Incognito RCM?
 				</button>
 				</h2>
 				</div>
 				<div id="collapseEight" class="collapse" aria-labelledby="e8" data-parent="#accordionOperations">
 				<div class="card-body">
-				Incognito Mode is not recommended for a variety of reasons. It functions by blanking your console’s PRODINFO, which is console-unique data that your console requires to boot. If Incognito mode goes wrong, it can result in damage to your console, even an unrecoverable brick. Additionally, Incognito Mode is less reliable than 90DNS as it depends on Nintendo rejecting telemetry logs from consoles with blanked PRODINFO and while that is currently true, Nintendo may change this in the future. 
-				<p>As of Atmosphere 0.12.0, a virtual PRODINFO blanking feature was included, which is safer than Incognito Mode, but still not a viable replacement for 90DNS.
-				<p>(Thanks to Discord user noirscape#6666 on the Nintendo Homebrew Discord server for the explanation of why Incognito is bad)
+				Incognito is not recommended for a variety of reasons. It functions by blanking parts of your console’s PRODINFO, which is console-unique data that your console requires to boot. If Incognito goes wrong, malfunctions, or if you lose the backup, it can result in damage to the functionality of your console, up to and including a brick and never being able to go online again.
+				<p>Part of the way Incognito functions is by forcing your console to send "invalid data" when connecting to Nintendo servers, which at the time reject such invalid connections. If Nintendo wanted to, they could simply set their servers to receive these connections, and then everyone and anyone relying on Incognito will be sending all of their telemetry to Nintendo instantly.
+				<p>The other issue with Incognito is that what it does delete, is (to speak simply) significantly short of everything that it <i>should</i> delete to have the functionality it claims to have. This is roughly equivalent to blanking out your street address when showing your driver's license to the police, but showing your full legal name.
+				<p>As of Atmosphere 0.12.0, a virtual PRODINFO blanking feature is included, which is safer than Incognito as the relevant data is redirected not deleted, but this method of protection is still not a viable replacement for 90DNS.
+				<p>(Thanks to Discord user noirscape#6666 on the Nintendo Homebrew Discord server for the explanation of why Incognito is bad, also denn and meme)
 				</div>
 				</div>
 			</div>
@@ -204,7 +206,7 @@
 				</div>
 				<div id="collapseNine" class="collapse" aria-labelledby="e9" data-parent="#accordionOperations">
 				<div class="card-body">
-				You can’t. Sorry.
+				In any meaningful way, you can’t. Sorry.
 				</div>
 				</div>
 			</div>
