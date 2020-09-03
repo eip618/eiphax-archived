@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+      <loc>https://eiphax.tech/e3ds.xml</loc>
+    </sitemap>
+    <sitemap>
+      <loc>https://eiphax.tech/enx.xml</loc>
+    </sitemap>
+    <sitemap>
+      <loc>https://eiphax.tech/eindex.xml</loc>
+    </sitemap>
+    <sitemap>
+      <loc>https://eiphax.tech/efacts.xml</loc>
+    </sitemap>
+	<sitemap>
+      <loc>https://eiphax.tech/ealbum.xml</loc>
+    </sitemap>
+    <sitemap>
+      <loc>https://eiphax.tech/eblog.xml</loc>
+    </sitemap>
+  </sitemapindex>
