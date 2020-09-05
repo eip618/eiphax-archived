@@ -1,5 +1,5 @@
 <html>
-<head>
+<head>                    
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684222-1"></script>
 <script>
@@ -77,6 +77,7 @@ th, td {
 				</tr>
 				<tr>
                     <th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('usm')">USM</button></th>
+                    <th><button class="btn-toggle-visibility" onclick="toggleIssueDivs('nbhax')">Browserhax 2020</button></th>
 				</tr>
             </table>
 			</center>
@@ -486,6 +487,56 @@ th, td {
 	<div class="box hidden" id="usm4">
 	<h3>Won't boot</h3>
 	<br>If you can't boot to Safe Mode, either one or more of your buttons are broken, or you're not holding them right. Safe Mode is a function of all 3DS family consoles and cannot be overridden or deleted.
+		</div>
+		<!-- BROWSERHAX LEADING DIV -->
+	<div class="box hidden" id="nbhax"><center>
+	    <table>
+	        <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('nbhax1')"><a href="#nbhax1">Freezing on a yellow screen</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('nbhax2')"><a href="#nbhax2">Freezing on a red screen</a></button></td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('nbhax3')"><a href="#nbhax3"Freezing on a dark orange screen</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('nbhax4')"><a href="#nbhax4">Crashes after a yellow screen</a></button></td>
+	        </tr>
+	        <tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('nbhax5')"><a href="#nbhax5"Crashes after a purple-grey screen</a></button></td>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('nbhax6')"><a href="#nbhax6">An exception occured after an orange screen</a></button></td>
+	        </tr>
+		<tr>
+	            <td><button class="btn-toggle-visibility" onclick="singleIssueDivsUSM('nbhax7')"><a href="#nbhax7"Crashes after a dark orange screen</a></button></td>
+	        </tr>
+		</table>
+		</center>
+		</div>
+		<!-- BOWSERHAX (browser but its like bowser get it?) ISSUE DIVS -->
+	<div class="box hidden" id="nbhax1">
+	<h3>Crash</h3>
+	<br>A simple crash. Simply just try again.
+		</div>
+	<div class="box hidden" id="nbhax2">
+	<h3>Missing boot.3dsx</h3>
+	<br>You're missing boot.3dsx (the Homebrew launcher) from the root of your SD card, or you have misplaced it somewhere other than the root. Put boot.3dsx on the SD root.
+		</div>
+	<div class="box hidden" id="nbhax3">
+	<h3>A new/old oopsie</h3>
+	<br>You've got the wrong browserhax files for your system. Go back to the guide and get the correct ones. NEW/OLD consoles can be differentiated by the small c-stick next to the ABYX buttons. Got a c-stick? Its NEW. No? Its OLD.
+		</div>
+	<div class="box hidden" id="nbhax4">
+	<h3>Browserhax files not on root</h3>
+	<br>Your browserhax files are in the wrong place. They should be alongside your Nintendo 3DS folder on the root of your SD card. Don't know what/where the root is? <a href="https://i.imgur.com/QXHIvOz.jpg">Take a look.</a>
+		</div>
+	<div class="box hidden" id="nbhax5">
+	<h3>Messed up extraction</h3>
+	<br>You are missing the browserhax payload file. Delete the arm11code.bin from your SD cards root and replace it with the files for your region from the browserhax archive.
+		</div>
+	<div class="box hidden" id="nbhax6">
+	<h3>CFW? Already?</h3>
+	<br>You have CFW installed. You should not be following this guide. Perhaps you should be <a href="https://3ds.hacks.guide/finalizing-setup">here.</a>
+		</div>
+	<div class="box hidden" id="nbhax7">
+	<h3>Wrong region</h3>
+	<br>You have the wrong files for your consoles region. Go back to your browserhax archive and get the right ones. Remember the letter at the end of your system firmware version. U = USA, E = EUROPE, J = JAPAN.
 		</div>
 		<!-- NTRBOOT LEADING DIV -->
 	<div class="box hidden" id="ntr">
