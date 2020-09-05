@@ -56,6 +56,9 @@ function singleIssueDivsFlip(idSelf = '') {
 	toggle(ids.flip, idSelf);
 }
 
+function singleIssueDivsBrowserhax(idSelf = '') {
+	toggle(ids.nbhax, idSelf);
+}
 // Util
 function toggle(ids, idSelf) {
   show(idSelf);
@@ -70,6 +73,8 @@ function reset() {
   ids.frog.sub.forEach(id => hide(id));
   ids.fred.forEach(id => hide(id));
   ids.flip.forEach(id => hide(id));
+  ids.usm.forEach(id => hide(id));
+  ids.nbhax.forEach(id => hide(id));
 }
 
 function show(id) {
