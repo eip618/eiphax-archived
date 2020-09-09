@@ -10,7 +10,7 @@ const ids = {
   },
   fred: ['fred1', 'fred2', 'fred3', 'fred4', 'fred5', 'fred6'],
   flip: ['flip1', 'flip2', 'flip3', 'flip4', 'flip5'],
-  nbhax: ['nbhax1', 'nbhax2', 'nbhax3', 'nbhax4', 'nbhax5', 'nbhax6', 'nbhax7'],
+  nbhax: ['nbhax1', 'nbhax2', 'nbhax3', 'nbhax4', 'nbhax5', 'nbhax6', 'nbhax7', 'nbhax8'],
   ntr: [''], // added when needed
 };
 
