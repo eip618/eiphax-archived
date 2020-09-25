@@ -19,6 +19,11 @@ ol {
 	padding-inline-start: 20px;
 }
 
+img {
+	max-width: 90%;
+	max-height: 90%;
+}
+
 hr.short {
 	width: 80%;
 }
