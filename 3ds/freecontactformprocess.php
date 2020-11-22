@@ -75,8 +75,8 @@ if(isset($_POST['Email_Address'])) {
 	$email_message .= "Contact? ".clean_string($email_from)."\r\n";
 	$email_message .= "Message: ".clean_string($comments)."\r\n";
 	
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
+$headers = 'From: '.$full_name."\r\n".
+'Reply-To: '.null."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 mail($email_to, $email_subject, $email_message, $headers);
 header("Location: $thankyou");
