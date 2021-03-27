@@ -1,0 +1,33 @@
+<!doctype html><html lang="en">
+<head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<title>it's washing time</title>
+<meta name="description" content="mmmmmmmmmmmmmmmmmmmmmTINKmmmmmmmmmmmmmmmmmTINKmmmmmmmmmmmmmmmmmmmTINKmmmmmmmmmmmTINK">
+<meta name="author" content="eip">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    background: url('assets/laundry.gif') no-repeat;
+	background-size: cover;
+}
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+}
+</style>
+</head>
+<body>
+<audio loop id="audio">
+<source src="assets/LAUNDRY.wav" type="audio/wav">
+</audio>
+<span id="wrapper"><button id="playButton">audio?</button></span>
+</body>
+<script>
+  playButton.addEventListener('click', function() {
+    document.getElementById('audio').play();
+  });
+</script>
+</html>
