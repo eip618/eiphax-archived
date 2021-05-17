@@ -64,12 +64,12 @@
                <p>Currently, the most widely used and trusted CFW is Luma, developed in part by AuroraWright. However, CFW is only half the story. CFW is loaded beside the original firmware by a custom bootloader, called boot9strap. boot9strap (or b9s) allows the running of unofficial code and payloads, and gives us access to load CFW beside the original firmware. For more information on the finer points of this, see the "what?" section.
                 <p>Most developers who develop unofficial applications do so for use on CFW, as CFW is more powerful, readily available (these days) and stable. Homebrew has less system access, and is generally less useful.</div>
             <p><button class="btn-toggle-visibility" data-target="#sec4">Next Up: Apps n' Stuff</button>
-				<div class="box hidden" id="sec4"><p><h4>Apps</h4>There a few main apps that you will encounter in your journeys with CFW. They are: FBI, godmode9, Anemone3DS, BootNTRSelector, Luma Updater, the Homebrew Launcher and Checkpoint/JKSM.
+				<div class="box hidden" id="sec4"><p><h4>Apps</h4>There a few main apps that you will encounter in your journeys with CFW. They are: FBI, godmode9, Anemone3DS, BootNTRSelector, Universal Updater, the Homebrew Launcher and Checkpoint/JKSM.
                 <p>FBI is an important application to have. FBI is an app that can install other applications to your hacked system. Thanks to Luma, it doesn't worry about signature checks. FBI cannot work without CFW and needs to be run once, then installed once: first run via Rosalina homebrew access, and then using that "homebrew FBI" to install the CFW version of FBI.
                  <p>godmode9 is technically a payload, not an application. Payloads are loaded before any of the other firmware is loaded, and so do not have the arm9 processor telling them what they can and cannot do. godmode9 is a full featured file explorer and manager, and the fact it runs as a payload means it can change anything about any file on your system, up to and including wiping the NAND <b>(do not do this).</b> On a positive note it can also make a backup of your NAND, your console specific encryption data, any cartridge games you have (see <a href="./piracy">my page on piracy</a>), and do things like restore your NAND backup to fix broken things.
                  <p>Anemone3DS is a theming engine for your console. It can theme your Home Menu, your pre-boot splashes and your background music.
                  <p>BootNTRSelector is a launcher for something called "NTR CFW". Despite the name, NTR is not actually a CFW. NTR is essentially a very powerful cheat engine that allows you to do things like stream your device to your PC ("New" consoles only) and cheat in games by editing the loaded RAM.
-                 <p>Luma Updater is a simple application that connects to the internet to check for, download and install updates to Luma, your CFW. Sometimes you will need to update the updater.
+                 <p>Universal Updater is like a "homebrew app store" for your console. It can install new apps, update apps, and even update/install payloads like Luma3DS and Godmode9.
                  <p>The Homebrew Launcher is a menu that allows you to launch Homebrew software. Most developers these days develop software for CFW only, not Homebrew, but sometimes something you want will only be available through Homebrew.
                  <p>Checkpoint is a save manager. It allows you to copy saves from digital and physical games, back them up and re-inject saves back into those games. This means that you can rip the saves off games, edit them and then reinject them. Checkpoint copies these saves in a decrypted format, which means they can be shared between systems very easily.
                  <br>JKSM does roughly the same thing, but Checkpoint is preferred in most cases. JKSM can be used on a Homebrew-only install, Checkpoint requires CFW. Checkpoint handles a large amount of games that JKSM has issues with, for whatever reason.
@@ -82,13 +82,10 @@
 				 <br><b>DCIM:</b> contains user-created pictures and screenshots.
 				 <br><b>cias:</b> optional, but recommended folder to organise CIAs you wish to install.
 				 <br><b>themes:</b> support and data folder for theming engines like Anemone.
-				 <br><b>steelhax:</b> contains support files for Steelhax/Steelminer. Not needed once Finalizing Setup has been completed.
 				 <br><b>private:</b> possibly contains support files for Lenny, an exploit used to get CFW. May also contain other app data, so leave it alone.
 				 <br><b>boot.firm:</b> Luma firmware file, usually. b9s runs boot.firm when the console boots, so you can change boot.firm to be something like godmode9 if you want, and your console will boot directly to that. (This is not advised under normal circumstances.)
 				 <br><b>boot.3dsx:</b> homebrew launcher executable.
 				 <br><b>boot.nds:</b> either b9stool, which is used to install CFW, or TWiLightMenu++ launcher file.
-				 <br><b>movable.sed:</b> your console's unique encryption data. You should have a backup of this file somewhere, but once you've installed CFW, it doesn't have to be on the SD.
-				 <br><b>484E4441.bin:</b> a clean version of your DS Download Play. Once you've been through Finalizing Setup and restored the clean version, this file isn't necessary.
 				 </div>
             <p><button class="btn-toggle-visibility" data-target="#sec5">Next Up: what?</button>
 			<div class="box hidden" id="sec5"><p>Here is a more in-depth explanation of the hardware, the software, CFW, what it does and how it works when we hack it. <a href="#?" class="btn-toggle-visibility" data-target="#sec5">Close this</a> if you don't really care about the process of hacking, but in my opinion it's important you understand what you are doing to your device.
@@ -109,12 +106,8 @@
 				<h4>Exploit Methods</h4>
                 <p>One of the best known exploits is Soundhax. Soundhax is currently used to install CFW on consoles on software version 11.3 and below. Soundhax exploits a long chain of vulnerabilities in the Nintendo Sound application, installed by default.
 				<p>Recently, the 3DS hacking community has been giving itself CPR, so we now have some new tools: Browserhax, unSAFE_MODE and bannerbomb3. By themselves, they're just exploits or glitches, but combined in certain ways, we get easy, free CFW access.
-				<p><b>New:</b> Nintendo has murdered Browserhax, so we're back to old methods involving Seedminer.
 				<h5>Browserhax</h5>
 				Browserhax was a new implementation of an old exploit, or so it seems. With a bit of work, it's been made to function on both Old and New consoles, across almost every region (sorry CHN). Browserhax can be simplified by the following two words: "oops lol". It's essentially just feeding the Internet Browser some bad data that it doesn't know how to handle (but should), and when it crashes, we interrupt it and run the Homebrew Launcher.
-				<br><b>Why doesn't Browserhax work any more?</b>
-				<br>11.14 patched it. Because the Internet Browser requires internet to work, when you use it, it asks if there is a system update. If there is, you cannot use the browser until you perform the system update.
-				<br>In this way, Browserhax would <i>technically</i> work on firmwares 11.4 - 11.13, but it is impossible to use due to the browser nag.
 				<h5>unSAFE_MODE</h5>
 				This one's a fun one. Basically, this exploit has existed for quite some time, but nobody ever found it until now. The reason it still exists is because SAFE_MODE's actual firmware hasn't been updated in forever. So, we worked out how to screw with it: put some bad data in the saved internet connections, then bring that bad data up in SAFE_MODE. This bad data can't just be "added" by normal means, so we need an exploit to add it.
 				<h5>bannerbomb3</h5>
