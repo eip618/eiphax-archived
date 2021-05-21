@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Modified from zoogie's script (https://github.com/zoogie/bfm_autolauncher/commit/20b488c19c5e627f9a544b2de46979eda31132ad)
 
 import datetime
 import glob
@@ -19,12 +20,12 @@ logging.basicConfig(level=logging.DEBUG, filename='bfm_autolauncher.log', filemo
 s = requests.Session()
 baseurl = "https://bfm.nintendohomebrew.com"
 currentid = ""
-currentVersion = "3.1.3"
+currentVersion = "CURRENT_AUTOLAUNCHER_VERSION"
 ctrc_kills_al_script = True
 active_job = False
 os_name = os.name
 skipUploadBecauseJobBroke = False
-
+count=10
 
 def signal_handler(sig, frame):
     # If bfCL was running, we've already killed it by pressing Ctr + C
@@ -103,14 +104,14 @@ def getmax(lfcs):
 	c=0
 	if isnew==2:
 		print("new3ds detected")
-		max     =[     16,     16,     20,     21,     22,     23,     26,     27,     29,     30,     31,     34,     35,    400]
-		distance=[0x00000,0x00100,0x00200,0x00400,0x00500,0x00600,0x00700,0x00900,0x00A00,0x00B00,0x01000,0x01200,0x02400,0x03F00]
+		max     =[     16,     16,     20]
+		distance=[0x00000,0x00100,0x00200]
 		with open("saves/new-v2.dat", "rb") as f:
 			buf = f.read()
 	elif isnew==0:
 		print("old3ds detected")
-		max     =[     18,     18,     21,     27,     29,     30,     39,     45,     56,    400]
-		distance=[0x00000,0x00100,0x00200,0x00400,0x00600,0x00C00,0x00E00,0x02100,0x06100,0x06200]
+		max     =[     18,     18,     20]
+		distance=[0x00000,0x00100,0x00200]
 		with open("saves/old-v2.dat", "rb") as f:
 			buf = f.read()
 	else:
@@ -233,10 +234,15 @@ while True:
             time.sleep(30)
             continue
         if r.text == "nothing":
-            print("No work. Waiting 10 seconds...")
+            print("No work. Waited %d seconds..." % count, end='\r')
             time.sleep(10)
+            count+=10
         else:
             currentid = r.text
+            if len(currentid) > 32:
+                print("\nID machine broke, is bfm up?\nRetrying in 30 seconds... ")
+                time.sleep(30)
+                continue
             skipUploadBecauseJobBroke = False
             r2 = s.get(baseurl + "/claimWork?task=" + currentid)
             if r2.text == "error":
