@@ -46,47 +46,19 @@
             <p>The Legend of Zelda: Ocarina of Time 3D: <a href="https://github.com/Nanquitas/Zelda-Ocarina-Of-Time-3D-Plugin">Zelda-Ocarina-Of-Time-3D-Plugin</a></p>
             <p>Assorted Games: <a href="https://itspizzatime1501.github.io/files/plugins/CTRPF-Plugins-master.zip">CTRPF Plugins 3.0</a></p>
             <h3 id="installing-plugin-type-plg">Installing plugin type <code>.plg</code></h3>
-            <ol>
-            <li>Download the <code>boot.firm</code> from <a href="http://badda.de/lumamod/Luma3DS_v9.1-7-gbd15f_mod.7z">here</a> and place it on your SD root, make sure you overwrite the current one.</li>
-            <li>Rename your <code>.plg</code> file to <code>plugin.plg</code></li>
-            <li>Make a folder called <code>plugins</code> if it doesn't already exist inside the <code>luma</code> folder on your SD card</li>
-            <li>Inside of the <code>plugins</code> folder make a folder named the titleid of the game you want to use the plugin file for (If you don't know the game titleid you can find a list <a href="http://3dsdb.com">here</a> or <a href="https://hax0kartik.github.io/3dsdb/">here</a>)</li>
-            <li>
-            Place the <code>plugin.plg</code> file in the folder you just created <br/><br/>
-            <img alt="plg location" src="/pic/lumaplugins1.png" /><br/><br/>
-            (in this example <code>00040000001B5100</code> is Pokemon Ultra Moon's titleid)</p>
-            </li>
-            <li>
-            Insert your sd card into your 3ds and boot it up, if you get a luma config screen select <code>Show NAND or user string in System Settings</code> and press start</p>
-            </li>
-            <li>Once you're in the home menu, open the rosalina menu (L + Dpad Down + Select by default) and select <code>Enable Plugin Loader</code></li>
-            <li>Press B to exit the rosalina menu</li>
-            <li>When you launch the game you setup a plugin for your screen should flash green during the Nintendo 3ds splash</li>
-            <li>The standard for cheat menus is the select button, if pressing select doesn't work consider reading the readme of the plugin you're using</li>
-            </ol>
+            <p>Currently there are no up-to-date forks of Luma3ds that have <code>.plg</code> file support. Your only option is to use <a href="https://github.com/Nanquitas/BootNTR/releases">BootNTR Selector</a> which requires you to have the <a href="https://github.com/Nanquitas/Luma3DS/releases/latest"><code>.3gx</code> loader fork</a> of Luma3ds installed. To find out how to install the <code>.3gx</code> loader fork you can follow the instructions below. <a href="https://3ds.eiphax.tech/ntrplugins">Here</a> is a guide on using BootNTR Selector.</p>
             <h3 id="installing-plugin-type-3gx">Installing plugin type <code>.3gx</code></h3>
             <ol>
-            <li>Download the <code>boot.firm</code> from <a href="https://github.com/Nanquitas/Luma3DS/releases/latest">here</a> and place it on your sd root, make sure you overwrite the current one.</li>
-            <li>Make a folder called <code>plugins</code> if it doesn't already exist in the <code>luma</code> folder on your sd</li>
+            <li>Download the <code>boot.firm</code> from <a href="https://github.com/Nanquitas/Luma3DS/releases/latest">here</a> and place it on your SD root, make sure you overwrite the current one.</li>
+            <li>Make a folder called <code>plugins</code> if it doesn't already exist in the <code>luma</code> folder on your SD</li>
             <li>Inside of the <code>plugins</code> folder make a folder named the titleid of the game you want to use the plugin file for (If you don't know the game titleid you can find a list <a href="http://3dsdb.com">here</a> or <a href="https://hax0kartik.github.io/3dsdb/">here</a>)</li>
             <li>Place your <code>.3gx</code> file in the folder you just created, here is an example that could be helpful:
             <br/><br/><img alt="3gx location" src="/pic/lumaplugins2.png" /> <br/><br/> (in this example <code>0004000000030800</code> is Mario Kart 7's titleid)</li>
-            <li>Insert your sd into your 3ds and boot it up, if you get a luma config screen select <code>Show NAND or user string in System Settings</code> and press start</li>
+            <li>Insert your SD into your 3ds and boot it up, if you get a luma config screen select <code>Show NAND or user string in System Settings</code> and press start</li>
             <li>Once you're in the home menu, open the rosalina menu (L + Dpad Down + Select by default) and enable the plugin loader</li>
             <li>Press B to exit rosalina</li>
             <li>Open the game you installed a plugin for, your screen should flash green or blue during the Nintendo 3ds splash</li>
             <li>The standard for cheat menus is the select button, if pressing select doesn't work consider reading the readme of the plugin you're using</li>
-            </ol>
-            <h3 id="optional-how-to-switch-between-3gx-and-plg-loader-luma-easily">(Optional) How to switch between <code>3gx</code> and <code>plg</code> loader luma easily</h3>
-            <ol>
-            <li>Download both <code>boot.firm</code>'s (<a href="https://github.com/Nanquitas/Luma3DS/releases/latest">Luma 3gx Loader</a> | <a href="http://badda.de/lumamod/Luma3DS_v9.1-7-gbd15f_mod.7z">Luma plg loader</a>)</li>
-            <li>Rename both <code>boot.firm</code>'s to something else like <code>Luma3ds_3gx_loader.firm</code> for the <code>3gx</code> loader and <code>Luma3ds_plg_loader.firm</code> for the <code>plg</code> loader</li>
-            <li>Download and install <a href="https://github.com/SaturnSH2x2/PayloadSpinner3DS/releases/latest">PayloadSpinner3ds</a> on your 3ds. Here is a QR you can scan with FBI (FBI -&gt; Remote Install -&gt; Scan QR Code)<br />
-            <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="PayloadSpinner3ds QR" src="/pic/lumaplugins3.png" /></li>
-            <li>Once it's done installing, exit to your home menu and open the app once. It should say <code>No payloads were found. Refer to README</code>, just press A to exit</li>
-            <li>Place both firm files in <code>/3ds/data/PayloadSpinner3DS/payloads</code> on your SD
-            <br/><br/><img alt="PayloadSpinner3ds payload location" src="/pic/lumaplugins4.png" /><br/><br/>
-              Now when you would like to switch just launch PayloadSpinner3DS and select the luma version you would like to use</li>
             </ol>
             <h3 id="troubleshooting"><span style="text-decoration: underline">Troubleshooting</span></h3>
             <h4 id="game-crashes-when-using-a-plugin"><strong>Game crashes when using a plugin</strong></h4>
