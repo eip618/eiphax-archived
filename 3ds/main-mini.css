@@ -512,6 +512,7 @@ font-weight:normal;
 .nav {
   display: inline-flex;
   flex-direction: row;
+  justify-content: flex-end;
 }
 .content {
   margin-top: 100px;
