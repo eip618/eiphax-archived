@@ -19,11 +19,6 @@ ol {
 	padding-inline-start: 20px;
 }
 
-img {
-	max-width: 90%;
-	max-height: 90%;
-}
-
 hr.short {
 	width: 80%;
 }
@@ -407,7 +402,6 @@ html {
   width: 100%;
   background-color: #434c5e;
   color: #d2dcef;
-  text-align: right;
   margin-right: 25%;
 }
 .freecontactform {
@@ -492,19 +486,32 @@ font-weight:normal;
   background-color: transparent;
   color: #d2dcef !important;
 }
-.container {
+.container{
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 50px;
 }
 .header {
   background: #434c5e;
   width: 100%;
   top: 0;
-  position:fixed;
+  position: fixed;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .logo {
-  float: left;
+  display: inline-flex;
+  flex-direction: row;
+}
+.badge {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+.nav {
+  display: inline-flex;
+  flex-direction: row;
 }
 .content {
   margin-top: 100px;
@@ -539,6 +546,10 @@ font-weight:normal;
 }
 .nav2 {
   float: right;
+  display: inline-flex;
+}
+.nav2 ul {
+  padding-left: 0px;
 }
 .little{
     font-size: 10px;
