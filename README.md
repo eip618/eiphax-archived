@@ -1,3 +1,6 @@
+# this has been archived and its projects been split into separate repos
+## go to my user repos to see them
+
 # eiphax
 eip's website\
 i specialise in 3ds information and hacking\
