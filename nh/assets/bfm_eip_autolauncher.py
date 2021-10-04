@@ -238,6 +238,7 @@ while True:
             time.sleep(10)
             count+=10
         else:
+            count=10
             currentid = r.text
             if len(currentid) > 32:
                 print("\nID machine broke, is bfm up?\nRetrying in 30 seconds... ")
